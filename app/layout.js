@@ -22,8 +22,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${fontPoppins.className} antialiased`}>
-        <Navbar />
-        <div className="container mx-auto px-4">{children}</div>
+        {/* Fixed Navbar */}
+        <div className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
+          <Navbar />
+        </div>
+
+        {/* Main Content dengan padding top untuk navbar */}
+        <div className="pt-16 lg:pt-20">{children}</div>
       </body>
     </html>
   );

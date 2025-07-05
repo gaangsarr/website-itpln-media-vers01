@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar bg-gradient-to-r from-[#B13BFF] via-[#4A1789] to-[#090040] p-3 relative">
+    <div className="navbar bg-gradient-to-r from-[#B13BFF] via-[#4A1789] to-[#090040] p-3 relative shadow-2xl">
       <div className="container mx-auto">
         <div className="navbar-box flex items-center justify-between">
           <div className="logo">
@@ -68,7 +68,7 @@ const Navbar = () => {
 
           {/* Mobile Menu */}
           <div
-            className={`lg:hidden absolute top-full left-0 w-full bg-gradient-to-b from-[#090040] to-[#1a0850] shadow-2xl transition-all duration-300 ease-in-out ${
+            className={`lg:hidden absolute top-full left-0 w-full bg-gradient-to-r from-[#B13BFF] via-[#4A1789] to-[#090040] shadow-2xl transition-all duration-300 ease-in-out ${
               active
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 -translate-y-4 pointer-events-none"
