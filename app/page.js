@@ -1,7 +1,12 @@
 import Image from "next/image";
 import Squares from "@/components/Squares";
+import Link from "next/link";
+import { getLatestArticles } from "@/lib/articles";
+import ArticleCard from "@/components/ArticleCard";
 
-export default function Home() {
+export default async function Home() {
+  const latestArticles = await getLatestArticles(3);
+
   return (
     <div className="min-h-screen relative overflow-hidden bg-white">
       {/* Background Squares dengan perbaikan responsif */}
@@ -77,16 +82,16 @@ export default function Home() {
           </div>
 
           {/* Right Column - Content */}
-          <div className="space-y-4 lg:space-y-6 lg:-translate-y-6">
+          <div className="space-y-4 lg:space-y-1 lg:-translate-y-6">
             {/* Heading */}
             <div className="space-y-2">
-              <p className="text-purple-500 text-lg sm:text-xl font-medium">
+              <p className="text-purple-500 text-lg sm:text-xl font-medium translate-y-5">
                 We are,
               </p>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#471396] leading-tight">
+              <h1 className="text-5xl sm:text-5xl lg:text-7xl font-black text-[#471396] leading-tight">
                 ITPLN Media!
               </h1>
-              <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-[#471396]">
+              <h2 className="text-2xl sm:text-2xl lg:text-3xl font-semibold text-[#471396] -translate-y-4">
                 Creativity to Beyond!
               </h2>
             </div>
@@ -107,6 +112,194 @@ export default function Home() {
               <button className="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 sm:px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 text-sm sm:text-base">
                 Learn More About Us
               </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* About Us */}
+      <div className="relative z-10">
+        <div className="bg-[#F8F8F8] py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            {/* About Us Header */}
+            <div className="mb-12">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#471396] mb-4">
+                About us
+              </h2>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
+                Lorem ipsum dolor sit amet
+                <br />
+                consectetur <span className="text-purple-500">
+                  adipiscing
+                </span>{" "}
+                elit.
+              </h1>
+              <p className="text-gray-600 text-base sm:text-lg mt-6 max-w-4xl mx-auto leading-relaxed">
+                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
+                faucibus ex sapien vitae pellentesque sem placerat. In id cursus
+                mi pretium tellus duis convallis. Tempus leo eu genean sed diam
+                urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum
+                egestas. Iaculis massa nisl malesuada lacinia integer nunc
+                posuere. Ut hendrerit semper vel class aptent taciti sociosqu.
+                Ad litora torquent per conubia nostra inceptos himenaeos.
+              </p>
+            </div>
+
+            {/* Statistics Cards */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 max-w-5xl mx-auto">
+              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="text-4xl lg:text-5xl font-bold text-[#471396] mb-2">
+                  70+
+                </div>
+                <div className="text-gray-600 font-medium">Members</div>
+              </div>
+              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="text-4xl lg:text-5xl font-bold text-[#471396] mb-2">
+                  70+
+                </div>
+                <div className="text-gray-600 font-medium">Projects</div>
+              </div>
+              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="text-4xl lg:text-5xl font-bold text-[#471396] mb-2">
+                  70+
+                </div>
+                <div className="text-gray-600 font-medium">Awards</div>
+              </div>
+              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="text-4xl lg:text-5xl font-bold text-[#471396] mb-2">
+                  70+
+                </div>
+                <div className="text-gray-600 font-medium">Clients</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Our Competencies */}
+      <div className="relative z-10">
+        <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            {/* Header */}
+            <h2 className="text-4xl sm:text-5xl font-bold text-[#471396] text-center mb-12">
+              Our Competencies
+            </h2>
+
+            {/* Competency Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
+              {/* Social Media Card */}
+              <div className="bg-gradient-to-br from-[#471396] to-purple-600 rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                <div className="bg-gray-300 rounded-2xl h-48 mb-4 flex items-center justify-center">
+                  <span className="text-gray-500 text-sm">
+                    Image Placeholder
+                  </span>
+                </div>
+                <h3 className="text-2xl font-bold text-white text-center">
+                  Social Media
+                </h3>
+              </div>
+
+              {/* Broadcasting Card */}
+              <div className="bg-gradient-to-br from-[#471396] to-purple-600 rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                <div className="bg-gray-300 rounded-2xl h-48 mb-4 flex items-center justify-center">
+                  <span className="text-gray-500 text-sm">
+                    Image Placeholder
+                  </span>
+                </div>
+                <h3 className="text-2xl font-bold text-white text-center">
+                  Broadcasting
+                </h3>
+              </div>
+
+              {/* Photography Card */}
+              <div className="bg-gradient-to-br from-[#471396] to-purple-600 rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                <div className="bg-gray-300 rounded-2xl h-48 mb-4 flex items-center justify-center">
+                  <span className="text-gray-500 text-sm">
+                    Image Placeholder
+                  </span>
+                </div>
+                <h3 className="text-2xl font-bold text-white text-center">
+                  Photography
+                </h3>
+              </div>
+
+              {/* Videography Card */}
+              <div className="bg-gradient-to-br from-[#471396] to-purple-600 rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                <div className="bg-gray-300 rounded-2xl h-48 mb-4 flex items-center justify-center">
+                  <span className="text-gray-500 text-sm">
+                    Image Placeholder
+                  </span>
+                </div>
+                <h3 className="text-2xl font-bold text-white text-center">
+                  Videography
+                </h3>
+              </div>
+
+              {/* Graphic Design Card */}
+              <div className="bg-gradient-to-br from-[#471396] to-purple-600 rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                <div className="bg-gray-300 rounded-2xl h-48 mb-4 flex items-center justify-center">
+                  <span className="text-gray-500 text-sm">
+                    Image Placeholder
+                  </span>
+                </div>
+                <h3 className="text-2xl font-bold text-white text-center">
+                  Graphic Design
+                </h3>
+              </div>
+
+              {/* Web Development Card */}
+              <div className="bg-gradient-to-br from-[#471396] to-purple-600 rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                <div className="bg-gray-300 rounded-2xl h-48 mb-4 flex items-center justify-center">
+                  <span className="text-gray-500 text-sm">
+                    Image Placeholder
+                  </span>
+                </div>
+                <h3 className="text-2xl font-bold text-white text-center">
+                  Web Development
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Latest Articles Section - Updated */}
+      <div className="relative z-10">
+        <div className="bg-[#F8F8F8] py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            {/* Header */}
+            <div className="text-center mb-12">
+              <h2 className="text-4xl sm:text-5xl font-bold text-[#471396] mb-4">
+                Artikel Terbaru
+              </h2>
+              <p className="text-gray-600 text-base sm:text-lg max-w-3xl mx-auto">
+                Baca artikel terbaru dari ITPLN Media tentang berbagai topik
+                menarik
+              </p>
+            </div>
+
+            {/* Articles Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12">
+              {latestArticles.length > 0 ? (
+                latestArticles.map((article) => (
+                  <ArticleCard key={article.slug} article={article} />
+                ))
+              ) : (
+                <div className="col-span-full text-center py-12">
+                  <p className="text-gray-500 text-lg">
+                    Belum ada artikel tersedia
+                  </p>
+                </div>
+              )}
+            </div>
+
+            {/* View All Articles Button */}
+            <div className="text-center">
+              <Link href="/artikel">
+                <button className="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 text-base">
+                  Lihat Semua Artikel
+                </button>
+              </Link>
             </div>
           </div>
         </div>
