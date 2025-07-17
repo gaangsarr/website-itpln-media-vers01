@@ -29,15 +29,15 @@ const Navbar = () => {
                 href={"/"}
                 className="hover:text-[#FFCC00] transition-all hover:font-bold"
               >
-                Profile
+                Home
               </Link>
             </li>
             <li>
               <Link
-                href={"/portfolio"}
+                href={"/#competencies"}
                 className="hover:text-[#FFCC00] transition-all hover:font-bold"
               >
-                Portfolio
+                Competencies
               </Link>
             </li>
             <li>
@@ -45,7 +45,7 @@ const Navbar = () => {
                 href={"/#artikel"}
                 className="hover:text-[#FFCC00] transition-all hover:font-bold"
               >
-                Artikel
+                Article
               </Link>
             </li>
             <li>
@@ -53,7 +53,7 @@ const Navbar = () => {
                 href={"/#testimoni"}
                 className="hover:text-[#FFCC00] transition-all hover:font-bold"
               >
-                Testimoni
+                Testimonials
               </Link>
             </li>
             <li>
@@ -84,7 +84,7 @@ const Navbar = () => {
                   >
                     <span className="flex items-center gap-3">
                       <i className="ri-user-line"></i>
-                      Profile
+                      Home
                     </span>
                   </Link>
                 </li>
@@ -96,7 +96,7 @@ const Navbar = () => {
                   >
                     <span className="flex items-center gap-3">
                       <i className="ri-folder-line"></i>
-                      Portfolio
+                      Competencies
                     </span>
                   </Link>
                 </li>
@@ -108,7 +108,7 @@ const Navbar = () => {
                   >
                     <span className="flex items-center gap-3">
                       <i className="ri-article-line"></i>
-                      Artikel
+                      Article
                     </span>
                   </Link>
                 </li>
@@ -120,7 +120,7 @@ const Navbar = () => {
                   >
                     <span className="flex items-center gap-3">
                       <i className="ri-chat-quote-line"></i>
-                      Testimoni
+                      Testimonials
                     </span>
                   </Link>
                 </li>

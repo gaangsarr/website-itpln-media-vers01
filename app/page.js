@@ -6,6 +6,7 @@ import { getLatestArticles } from "@/lib/articles";
 import { getLatestTestimonials } from "@/lib/testimonials";
 import ArticleCard from "@/components/ArticleCard";
 import TestimonialCard from "@/components/TestimonialCard";
+import Footer from "@/components/Footer";
 
 export default async function Home() {
   const latestArticles = await getLatestArticles(3);
@@ -14,7 +15,7 @@ export default async function Home() {
   return (
     <div className="min-h-screen relative overflow-hidden bg-white">
       {/* Background Squares dengan perbaikan responsif */}
-      <div className="fixed top-0 right-0 left-0 bottom-0 w-full h-full z-0 opacity-5">
+      <div className="absolute inset-0 z-0 opacity-5">
         <Squares
           speed={0.5}
           squareSize={40}
@@ -181,8 +182,8 @@ export default async function Home() {
       </div>
 
       {/* Our Competencies */}
-      <div className="relative z-10">
-        <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10" id="competencies">
+        <div className="bg-white py-25 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             {/* Header */}
             <h2 className="text-4xl sm:text-5xl font-bold text-[#471396] text-center mb-12">
@@ -340,6 +341,241 @@ export default async function Home() {
           </div>
         </div>
       </div>
+
+      {/* Rate Card Section */}
+      <div className="relative z-10" id="ratecard">
+        <div className="bg-white py-25 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            {/* Header */}
+            <div className="text-center mb-12">
+              <h2 className="text-4xl sm:text-5xl font-bold text-[#471396] mb-4">
+                Rate Card
+              </h2>
+              <p className="text-gray-600 text-base sm:text-lg max-w-3xl mx-auto">
+                Pilih paket layanan yang sesuai dengan kebutuhan Anda
+              </p>
+            </div>
+
+            {/* Rate Cards Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
+              {/* Social Media Package */}
+              <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-purple-100">
+                <div className="text-center mb-6">
+                  <h3 className="text-purple-600 text-lg font-semibold mb-2">
+                    Social Media
+                  </h3>
+                  <div className="text-3xl font-bold text-[#471396] mb-1">
+                    Rp. 500.000
+                  </div>
+                  <div className="text-gray-500 text-sm">per bulan</div>
+                </div>
+                <ul className="space-y-3 mb-6 text-sm">
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                    Content Planning & Strategy
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                    15 Feed Posts per bulan
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                    Instagram Stories
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                    Basic Analytics Report
+                  </li>
+                </ul>
+                <button className="w-full bg-[#471396] text-white py-3 rounded-full font-semibold hover:bg-purple-700 transition-colors duration-300">
+                  Contact
+                </button>
+              </div>
+
+              {/* Photography Package */}
+              <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-purple-100">
+                <div className="text-center mb-6">
+                  <h3 className="text-purple-600 text-lg font-semibold mb-2">
+                    Photography
+                  </h3>
+                  <div className="text-3xl font-bold text-[#471396] mb-1">
+                    Rp. 750.000
+                  </div>
+                  <div className="text-gray-500 text-sm">per project</div>
+                </div>
+                <ul className="space-y-3 mb-6 text-sm">
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                    4 Hours Photo Session
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                    50+ Edited Photos
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                    High Resolution Files
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                    Online Gallery Access
+                  </li>
+                </ul>
+                <button className="w-full bg-[#471396] text-white py-3 rounded-full font-semibold hover:bg-purple-700 transition-colors duration-300">
+                  Contact
+                </button>
+              </div>
+
+              {/* Videography Package */}
+              <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-purple-100">
+                <div className="text-center mb-6">
+                  <h3 className="text-purple-600 text-lg font-semibold mb-2">
+                    Videography
+                  </h3>
+                  <div className="text-3xl font-bold text-[#471396] mb-1">
+                    Rp. 1.500.000
+                  </div>
+                  <div className="text-gray-500 text-sm">per project</div>
+                </div>
+                <ul className="space-y-3 mb-6 text-sm">
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                    Full Day Shooting
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                    Professional Editing
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                    4K Video Quality
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                    Color Grading & Audio
+                  </li>
+                </ul>
+                <button className="w-full bg-[#471396] text-white py-3 rounded-full font-semibold hover:bg-purple-700 transition-colors duration-300">
+                  Contact
+                </button>
+              </div>
+
+              {/* Graphic Design Package */}
+              <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-purple-100">
+                <div className="text-center mb-6">
+                  <h3 className="text-purple-600 text-lg font-semibold mb-2">
+                    Graphic Design
+                  </h3>
+                  <div className="text-3xl font-bold text-[#471396] mb-1">
+                    Rp. 300.000
+                  </div>
+                  <div className="text-gray-500 text-sm">per design</div>
+                </div>
+                <ul className="space-y-3 mb-6 text-sm">
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                    Logo Design
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                    Brand Identity
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                    Print & Digital Ready
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                    3 Revision Rounds
+                  </li>
+                </ul>
+                <button className="w-full bg-[#471396] text-white py-3 rounded-full font-semibold hover:bg-purple-700 transition-colors duration-300">
+                  Contact
+                </button>
+              </div>
+
+              {/* Web Development Package */}
+              <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-purple-100">
+                <div className="text-center mb-6">
+                  <h3 className="text-purple-600 text-lg font-semibold mb-2">
+                    Web Development
+                  </h3>
+                  <div className="text-3xl font-bold text-[#471396] mb-1">
+                    Rp. 2.500.000
+                  </div>
+                  <div className="text-gray-500 text-sm">per project</div>
+                </div>
+                <ul className="space-y-3 mb-6 text-sm">
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                    Responsive Design
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                    Modern Framework
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                    SEO Optimization
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                    3 Months Support
+                  </li>
+                </ul>
+                <button className="w-full bg-[#471396] text-white py-3 rounded-full font-semibold hover:bg-purple-700 transition-colors duration-300">
+                  Contact
+                </button>
+              </div>
+
+              {/* Event Organizer Package */}
+              <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-purple-100">
+                <div className="text-center mb-6">
+                  <h3 className="text-purple-600 text-lg font-semibold mb-2">
+                    Event Organizer
+                  </h3>
+                  <div className="text-3xl font-bold text-[#471396] mb-1">
+                    Rp. 5.000.000
+                  </div>
+                  <div className="text-gray-500 text-sm">per event</div>
+                </div>
+                <ul className="space-y-3 mb-6 text-sm">
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                    Event Planning & Coordination
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                    Venue Management
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                    Documentation Team
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                    Post-Event Report
+                  </li>
+                </ul>
+                <button className="w-full bg-[#471396] text-white py-3 rounded-full font-semibold hover:bg-purple-700 transition-colors duration-300">
+                  Contact
+                </button>
+              </div>
+            </div>
+
+            {/* Custom Package CTA */}
+            <div className="text-center mt-12">
+              <p className="text-gray-600 mb-4">
+                Butuh paket khusus? Hubungi kami untuk konsultasi gratis
+              </p>
+              <button className="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 text-base">
+                Konsultasi Gratis
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 }
