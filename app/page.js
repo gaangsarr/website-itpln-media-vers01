@@ -352,14 +352,14 @@ export default async function Home() {
                 Rate Card
               </h2>
               <p className="text-gray-600 text-base sm:text-lg max-w-3xl mx-auto">
-                Pilih paket layanan yang sesuai dengan kebutuhan Anda
+                Belum ada rate card yang tersedia.
               </p>
             </div>
 
             {/* Rate Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
-              {/* Social Media Package */}
-              <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-purple-100">
+            {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto"> */}
+            {/* Social Media Package */}
+            {/* <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-purple-100">
                 <div className="text-center mb-6">
                   <h3 className="text-purple-600 text-lg font-semibold mb-2">
                     Social Media
@@ -390,10 +390,10 @@ export default async function Home() {
                 <button className="w-full bg-[#471396] text-white py-3 rounded-full font-semibold hover:bg-purple-700 transition-colors duration-300">
                   Contact
                 </button>
-              </div>
+              </div> */}
 
-              {/* Photography Package */}
-              <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-purple-100">
+            {/* Photography Package */}
+            {/* <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-purple-100">
                 <div className="text-center mb-6">
                   <h3 className="text-purple-600 text-lg font-semibold mb-2">
                     Photography
@@ -424,10 +424,10 @@ export default async function Home() {
                 <button className="w-full bg-[#471396] text-white py-3 rounded-full font-semibold hover:bg-purple-700 transition-colors duration-300">
                   Contact
                 </button>
-              </div>
+              </div> */}
 
-              {/* Videography Package */}
-              <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-purple-100">
+            {/* Videography Package */}
+            {/* <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-purple-100">
                 <div className="text-center mb-6">
                   <h3 className="text-purple-600 text-lg font-semibold mb-2">
                     Videography
@@ -458,44 +458,44 @@ export default async function Home() {
                 <button className="w-full bg-[#471396] text-white py-3 rounded-full font-semibold hover:bg-purple-700 transition-colors duration-300">
                   Contact
                 </button>
-              </div>
+              </div> */}
 
-              {/* Graphic Design Package */}
-              <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-purple-100">
+            {/* Graphic Design Package */}
+            {/* <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-purple-100">
                 <div className="text-center mb-6">
                   <h3 className="text-purple-600 text-lg font-semibold mb-2">
-                    Graphic Design
+                    TBA
                   </h3>
                   <div className="text-3xl font-bold text-[#471396] mb-1">
-                    Rp. 300.000
+                    TBA
                   </div>
-                  <div className="text-gray-500 text-sm">per design</div>
+                  <div className="text-gray-500 text-sm">TBA</div>
                 </div>
                 <ul className="space-y-3 mb-6 text-sm">
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                    Logo Design
+                    TBA
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                    Brand Identity
+                    TBA
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                    Print & Digital Ready
+                    TBA
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                    3 Revision Rounds
+                    TBA
                   </li>
                 </ul>
                 <button className="w-full bg-[#471396] text-white py-3 rounded-full font-semibold hover:bg-purple-700 transition-colors duration-300">
                   Contact
                 </button>
-              </div>
+              </div> */}
 
-              {/* Web Development Package */}
-              <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-purple-100">
+            {/* Web Development Package */}
+            {/* <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-purple-100">
                 <div className="text-center mb-6">
                   <h3 className="text-purple-600 text-lg font-semibold mb-2">
                     Web Development
@@ -526,10 +526,10 @@ export default async function Home() {
                 <button className="w-full bg-[#471396] text-white py-3 rounded-full font-semibold hover:bg-purple-700 transition-colors duration-300">
                   Contact
                 </button>
-              </div>
+              </div> */}
 
-              {/* Event Organizer Package */}
-              <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-purple-100">
+            {/* Event Organizer Package */}
+            {/* <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-purple-100">
                 <div className="text-center mb-6">
                   <h3 className="text-purple-600 text-lg font-semibold mb-2">
                     Event Organizer
@@ -560,18 +560,18 @@ export default async function Home() {
                 <button className="w-full bg-[#471396] text-white py-3 rounded-full font-semibold hover:bg-purple-700 transition-colors duration-300">
                   Contact
                 </button>
-              </div>
-            </div>
+              </div> */}
+            {/* </div> */}
 
             {/* Custom Package CTA */}
-            <div className="text-center mt-12">
+            {/* <div className="text-center mt-12">
               <p className="text-gray-600 mb-4">
                 Butuh paket khusus? Hubungi kami untuk konsultasi gratis
               </p>
               <button className="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 text-base">
                 Konsultasi Gratis
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -107,14 +107,16 @@ const UIDesign = () => {
                 <li>
                   • Instagram Post: Upload main screens to personal/team's
                   public Instagram account with:
-                  <li>
-                    - Title and short description (max 100 words) explaining
-                    concept, features, and educational value.
-                  </li>
-                  <li>
-                    - Required hashtags: #NCC2025 #ReelsNuklir #ITPLNMedia.
-                  </li>
-                  <li>- Mention @itplnmedia and 3 friends. </li>
+                  <ul>
+                    <li>
+                      - Title and short description (max 100 words) explaining
+                      concept, features, and educational value.
+                    </li>
+                    <li>
+                      - Required hashtags: #NCC2025 #ReelsNuklir #ITPLNMedia.
+                    </li>
+                    <li>- Mention @itplnmedia and 3 friends. </li>
+                  </ul>
                 </li>
               </ul>
             </div>

@@ -99,11 +99,13 @@ const Reels = () => {
                 <li>
                   • Instagram Post: Upload to personal/team's public Instagram
                   account with:
-                  <li> - Title and short description (max 100 words). </li>
-                  <li>
-                    - Required hashtags: #NCC2025 #ReelsNuklir #ITPLNMedia.
-                  </li>
-                  <li>- Mention @itplnmedia and 3 friends. </li>
+                  <ul>
+                    <li> - Title and short description (max 100 words). </li>
+                    <li>
+                      - Required hashtags: #NCC2025 #ReelsNuklir #ITPLNMedia.
+                    </li>
+                    <li>- Mention @itplnmedia and 3 friends. </li>
+                  </ul>
                 </li>
                 <li>• Submission File: MP4 video file. </li>
               </ul>
