@@ -34,7 +34,7 @@ export default async function Home() {
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl p-3 shadow-lg transform hover:scale-105 transition-transform duration-300">
                 <Image
-                  src="/home-1.jpg"
+                  src="/home-1.JPG"
                   alt="ITPLN Team Photo 1"
                   width={280}
                   height={200}
@@ -43,7 +43,7 @@ export default async function Home() {
               </div>
               <div className="bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl p-3 shadow-lg transform hover:scale-105 transition-transform duration-300">
                 <Image
-                  src="/home-1.jpg"
+                  src="/home-1.JPG"
                   alt="ITPLN Team Photo 2"
                   width={280}
                   height={200}
@@ -56,7 +56,7 @@ export default async function Home() {
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl p-3 shadow-lg transform hover:scale-105 transition-transform duration-300">
                 <Image
-                  src="/home-1.jpg"
+                  src="/home-1.JPG"
                   alt="ITPLN Team Photo 3"
                   width={280}
                   height={200}
@@ -65,7 +65,7 @@ export default async function Home() {
               </div>
               <div className="bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl p-3 shadow-lg transform hover:scale-105 transition-transform duration-300">
                 <Image
-                  src="/home-1.jpg"
+                  src="/home-1.JPG"
                   alt="ITPLN Team Photo 4"
                   width={280}
                   height={200}
@@ -77,7 +77,7 @@ export default async function Home() {
             {/* Bottom row - 1 large photo */}
             <div className="bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl p-3 shadow-lg transform hover:scale-105 transition-transform duration-300">
               <Image
-                src="/home-1.jpg"
+                src="/home-1.JPG"
                 alt="ITPLN Team Photo 5"
                 width={580}
                 height={300}
