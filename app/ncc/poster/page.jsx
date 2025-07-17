@@ -63,7 +63,7 @@ const PosterCompetitionPage = () => {
 
       {/* Competition Details Section */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
+        <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
           <h2 className="text-3xl font-bold text-center mb-8">
             Competition Details
           </h2>
@@ -74,28 +74,58 @@ const PosterCompetitionPage = () => {
                 Requirements
               </h3>
               <ul className="space-y-2 text-gray-700">
-                <li>• Original poster design</li>
-                <li>• High resolution (300 DPI minimum)</li>
-                <li>• A3 size format (297 x 420 mm)</li>
-                <li>• Creative and innovative concept</li>
-                <li>• Relevant to the competition theme</li>
+                <li>
+                  • Participants: Active High School/Vocational School students
+                  or University students (D3/S1) in Indonesia.
+                </li>
+                <li>• Format: Digital infographic poster.</li>
+                <li>• Originality: Must be 100% original.</li>
+                <li>
+                  • Size & Resolution: A3 size (3508x4961 pixels) vertical,
+                  minimum 300 dpi.
+                </li>
+                <li>• File Type: JPG or PNG.</li>
+                <li>
+                  • Logo: Must include the official ITPLN Media logo (provided
+                  by committee).
+                </li>
+                <li>
+                  • No Identifiers: No personal/institutional watermarks or
+                  logos on the poster.
+                </li>
+                <li>
+                  • Instagram Post: Upload to personal, public Instagram account
+                  with:
+                  <li>- Title and short description (max 100 words).</li>
+                  <li>
+                    - Required hashtags: #NCC2025 #ReelsNuklir #ITPLNMedia.
+                  </li>
+                  <li>- Mention @itplnmedia and 3 friends. </li>
+                </li>
+                <li>
+                  • Submission Files: JPG/PNG poster file and a PDF concept
+                  explanation (max 5 pages).
+                </li>
               </ul>
             </div>
 
             <div>
               <h3 className="text-xl font-bold mb-4 text-purple-700">
-                Submission Format
+                Submission Form (Google Form fields):
               </h3>
               <ul className="space-y-2 text-gray-700">
-                <li>• PDF and PNG format</li>
-                <li>• Maximum file size: 10MB</li>
-                <li>• Include design rationale</li>
-                <li>• Submit through registration portal</li>
-                <li>• Include participant information</li>
+                <li>• Full Name </li>
+                <li>• School/University </li>
+                <li>• Phone Number </li>
+                <li>• Email Address </li>
+                <li>• Proof of Payment (screenshot/photo) </li>
+                <li>• Link to Instagram Post </li>
+                <li>• Upload Poster File (JPG/PNG) </li>
+                <li>• Upload Concept Explanation File (PDF) </li>
               </ul>
             </div>
           </div>
-        </div> */}
+        </div>
 
         <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
           <h2 className="text-3xl font-bold text-center mb-8">Prizes</h2>

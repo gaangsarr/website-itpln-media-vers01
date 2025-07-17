@@ -64,7 +64,7 @@ const UIDesign = () => {
 
       {/* Competition Details Section */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
+        <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
           <h2 className="text-3xl font-bold text-center mb-8">
             Competition Details
           </h2>
@@ -75,28 +75,70 @@ const UIDesign = () => {
                 Requirements
               </h3>
               <ul className="space-y-2 text-gray-700">
-                <li>• Original poster design</li>
-                <li>• High resolution (300 DPI minimum)</li>
-                <li>• A3 size format (297 x 420 mm)</li>
-                <li>• Creative and innovative concept</li>
-                <li>• Relevant to the competition theme</li>
+                <li>
+                  • Participants: Active High School/Vocational School students
+                  or University students (D3/S1) in Indonesia. Can be individual
+                  or team (max 2 members).
+                </li>
+                <li>
+                  • Concept: UI design for an educational/information
+                  application relevant to the theme "Data Science for Clean
+                  Nuclear Energy Needs."
+                </li>
+                <li>• Originality: Must be 100% original. </li>
+                <li>
+                  • Tools: Figma, Adobe XD, or similar UI/UX design software.
+                </li>
+                <li>
+                  • Resolution: Recommended 1080x1920 px (for mobile display).
+                </li>
+                <li>
+                  • No Identifiers: No personal/institutional watermarks or
+                  logos on the design screens.
+                </li>
+                <li>
+                  • Copyright: All design assets must not violate copyrights.
+                </li>
+                <li>
+                  • Submission Files: Interactive prototype link, 3-5 main
+                  screens (JPG/PNG), and optional PDF concept presentation (max
+                  5 pages).
+                </li>
+                <li>
+                  • Instagram Post: Upload main screens to personal/team's
+                  public Instagram account with:
+                  <li>
+                    - Title and short description (max 100 words) explaining
+                    concept, features, and educational value.
+                  </li>
+                  <li>
+                    - Required hashtags: #NCC2025 #ReelsNuklir #ITPLNMedia.
+                  </li>
+                  <li>- Mention @itplnmedia and 3 friends. </li>
+                </li>
               </ul>
             </div>
 
             <div>
               <h3 className="text-xl font-bold mb-4 text-purple-700">
-                Submission Format
+                Submission Form (Google Form fields):
               </h3>
               <ul className="space-y-2 text-gray-700">
-                <li>• PDF and PNG format</li>
-                <li>• Maximum file size: 10MB</li>
-                <li>• Include design rationale</li>
-                <li>• Submit through registration portal</li>
-                <li>• Include participant information</li>
+                <li>• Full Name(s) / Team Name </li>
+                <li>• School/University </li>
+                <li>• Phone Number </li>
+                <li>• Email Address </li>
+                <li>• Proof of Payment (screenshot/photo) </li>
+                <li>• Link to Instagram Post (of main screens) </li>
+                <li>
+                  • Prototype Link (Figma/Adobe XD, etc. - ensure public access)
+                </li>
+                <li>• Upload Main Screens (JPG/PNG - 3 to 5 files) </li>
+                <li>• Upload Concept Presentation (Optional PDF)</li>
               </ul>
             </div>
           </div>
-        </div> */}
+        </div>
 
         <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
           <h2 className="text-3xl font-bold text-center mb-8">Prizes</h2>
