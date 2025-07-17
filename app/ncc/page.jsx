@@ -134,26 +134,49 @@ const NCCLandingPage = () => {
         </div>
 
         <div className="text-center">
-          <button className="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-purple-700 hover:to-purple-800 transition-all duration-300 transform hover:scale-105 shadow-lg">
-            Reach out to us!
-          </button>
+          <a
+            href="https://wa.me/6281383435345"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block"
+          >
+            <button className="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-purple-700 hover:to-purple-800 transition-all duration-300 transform hover:scale-105 shadow-lg">
+              Reach out to us!
+            </button>
+          </a>
         </div>
       </div>
 
       {/* More Information Section */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:items-center">
         <h2 className="text-3xl font-bold text-center mb-8">
           More Information
         </h2>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-purple-700 hover:to-purple-800 transition-all duration-300 transform hover:scale-105 shadow-lg">
-            Instagram
-          </button>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          {/* Tombol Instagram */}
+          <a
+            href="https://www.instagram.com/itplnmedia"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block"
+          >
+            <button className="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-purple-700 hover:to-purple-800 transition-all duration-300 transform hover:scale-105 shadow-lg">
+              Instagram
+            </button>
+          </a>
 
-          <button className="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-purple-700 hover:to-purple-800 transition-all duration-300 transform hover:scale-105 shadow-lg">
-            Contact Person
-          </button>
+          {/* Tombol Contact Person (WhatsApp) */}
+          <a
+            href="https://wa.me/6289513050951"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block"
+          >
+            <button className="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-purple-700 hover:to-purple-800 transition-all duration-300 transform hover:scale-105 shadow-lg">
+              Contact Person
+            </button>
+          </a>
         </div>
       </div>
       <Footer />
