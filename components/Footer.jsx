@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-[#B13BFF] via-[#4A1789] to-[#090040] text-white">
+    <footer className="relative z-20 bg-gradient-to-r from-[#B13BFF] via-[#4A1789] to-[#090040] text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo and Company Info */}
