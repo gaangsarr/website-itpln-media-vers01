@@ -42,7 +42,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href={"#artikel"}
+                href={"/#artikel"}
                 className="hover:text-[#FFCC00] transition-all hover:font-bold"
               >
                 Artikel
@@ -50,7 +50,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href={"#testimoni"}
+                href={"/#testimoni"}
                 className="hover:text-[#FFCC00] transition-all hover:font-bold"
               >
                 Testimoni
@@ -58,7 +58,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href={"#ratecard"}
+                href={"/#ratecard"}
                 className="hover:text-[#FFCC00] transition-all hover:font-bold"
               >
                 Ratecard
@@ -102,7 +102,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    href={"#artikel"}
+                    href={"/#artikel"}
                     onClick={() => setActive(false)}
                     className="block px-4 py-3 text-white font-semibold hover:bg-white hover:text-black hover:bg-opacity-10 rounded-lg transition-all duration-200 hover:translate-x-2"
                   >
@@ -114,7 +114,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    href={"#testimoni"}
+                    href={"/#testimoni"}
                     onClick={() => setActive(false)}
                     className="block px-4 py-3 text-white font-semibold hover:bg-white hover:text-black hover:bg-opacity-10 rounded-lg transition-all duration-200 hover:translate-x-2"
                   >
@@ -126,7 +126,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    href={"#ratecard"}
+                    href={"/#ratecard"}
                     onClick={() => setActive(false)}
                     className="block px-4 py-3 text-white font-semibold hover:bg-white hover:text-black hover:bg-opacity-10 rounded-lg transition-all duration-200 hover:translate-x-2"
                   >
