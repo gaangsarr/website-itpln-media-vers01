@@ -1,11 +1,15 @@
+// pages/index.js atau app/page.js (tergantung Next.js version)
 import Image from "next/image";
 import Squares from "@/components/Squares";
 import Link from "next/link";
 import { getLatestArticles } from "@/lib/articles";
+import { getLatestTestimonials } from "@/lib/testimonials";
 import ArticleCard from "@/components/ArticleCard";
+import TestimonialCard from "@/components/TestimonialCard";
 
 export default async function Home() {
   const latestArticles = await getLatestArticles(3);
+  const latestTestimonials = await getLatestTestimonials(6);
 
   return (
     <div className="min-h-screen relative overflow-hidden bg-white">
@@ -263,9 +267,9 @@ export default async function Home() {
         </div>
       </div>
 
-      {/* Latest Articles Section - Updated */}
-      <div className="relative z-10">
-        <div className="bg-[#F8F8F8] py-16 px-4 sm:px-6 lg:px-8">
+      {/* Latest Articles Section */}
+      <div className="relative z-10" id="artikel">
+        <div className="bg-[#F8F8F8] py-25 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             {/* Header */}
             <div className="text-center mb-12">
@@ -300,6 +304,38 @@ export default async function Home() {
                   Lihat Semua Artikel
                 </button>
               </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Testimonials Section */}
+      <div className="relative z-10" id="testimoni">
+        <div className="bg-white py-25 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            {/* Header */}
+            <div className="text-center mb-12">
+              <h2 className="text-4xl sm:text-5xl font-bold text-[#471396] mb-4">
+                Testimoni
+              </h2>
+              <p className="text-gray-600 text-base sm:text-lg max-w-3xl mx-auto">
+                Apa yang mereka katakan tentang ITPLN Media
+              </p>
+            </div>
+
+            {/* Testimonials Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+              {latestTestimonials.length > 0 ? (
+                latestTestimonials.map((testimonial, index) => (
+                  <TestimonialCard key={index} testimonial={testimonial} />
+                ))
+              ) : (
+                <div className="col-span-full text-center py-12">
+                  <p className="text-gray-500 text-lg">
+                    Belum ada testimoni tersedia
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </div>
