@@ -236,25 +236,22 @@ const NCCLandingPage = () => {
               <h3 className="text-xl font-bold mb-2">
                 17 Juli - 1 Agustus 2025:
               </h3>
-              <p className="text-purple-100">
-                Pendaftaran & Pengumpulan Karya Batch 1
-              </p>
+              <p className="text-purple-100">Pendaftaran Karya Batch 1</p>
             </div>
 
             <div>
-              <h3 className="text-xl font-bold mb-2">
-                30 Juli - 31 Juli 2025:
-              </h3>
-              <p className="text-purple-100">
-                Pendaftaran & Pengumpulan Karya Batch 2
-              </p>
+              <h3 className="text-xl font-bold mb-2">2 - 4 Agustus 2025:</h3>
+              <p className="text-purple-100">Pendaftaran Karya Batch 2</p>
             </div>
 
             <div>
-              <h3 className="text-xl font-bold mb-2">
-                1 Agustus - 14 Agustus 2025:
-              </h3>
-              <p className="text-purple-100">Penjurian</p>
+              <h3 className="text-xl font-bold mb-2">30 - 31 Agustus 2025:</h3>
+              <p className="text-purple-100">Pengumpulan Karya Batch 1 & 2</p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold mb-2">1 - 12 September 2025:</h3>
+              <p className="text-purple-100">Penilaian & Kurasi Karya</p>
             </div>
 
             <div>
