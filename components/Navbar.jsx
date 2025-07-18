@@ -34,6 +34,14 @@ const Navbar = () => {
             </li>
             <li>
               <Link
+                href={"/ncc"}
+                className="hover:text-[#FFCC00] transition-all hover:font-bold"
+              >
+                NCC
+              </Link>
+            </li>
+            <li>
+              <Link
                 href={"/#competencies"}
                 className="hover:text-[#FFCC00] transition-all hover:font-bold"
               >
@@ -90,7 +98,19 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    href={"/portfolio"}
+                    href={"/ncc"}
+                    onClick={() => setActive(false)}
+                    className="block px-4 py-3 text-white font-semibold hover:bg-white hover:text-black hover:bg-opacity-10 rounded-lg transition-all duration-200 hover:translate-x-2"
+                  >
+                    <span className="flex items-center gap-3">
+                      <i className="ri-lightbulb-line"></i>
+                      NCC
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href={"/#competencies"}
                     onClick={() => setActive(false)}
                     className="block px-4 py-3 text-white font-semibold hover:bg-white hover:text-black hover:bg-opacity-10 rounded-lg transition-all duration-200 hover:translate-x-2"
                   >
