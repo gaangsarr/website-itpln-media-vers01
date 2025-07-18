@@ -240,7 +240,7 @@ const NCCLandingPage = () => {
             </div>
 
             <div>
-              <h3 className="text-xl font-bold mb-2">2 - 4 Agustus 2025:</h3>
+              <h3 className="text-xl font-bold mb-2">2 - 14 Agustus 2025:</h3>
               <p className="text-purple-100">Pendaftaran Karya Batch 2</p>
             </div>
 
