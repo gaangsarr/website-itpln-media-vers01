@@ -17,10 +17,9 @@ export default function AffiliateRegistration() {
 
   // Generate unique referral code
   const generateReferralCode = () => {
-    const prefix = "NCC25";
-    const timestamp = Date.now().toString(36);
-    const random = Math.random().toString(36).substr(2, 4);
-    return `${prefix}${timestamp}${random}`.toUpperCase();
+    const timestamp = Date.now().toString(36).slice(-4); // ambil 4 karakter terakhir dari timestamp base36
+    const random = Math.random().toString(36).slice(2, 6); // ambil 4 karakter acak
+    return `${timestamp}${random}`.toUpperCase(); // gabungkan dan jadikan kapital
   };
 
   const handleInputChange = (e) => {
