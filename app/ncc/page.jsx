@@ -262,6 +262,31 @@ const NCCLandingPage = () => {
         </div>
       </div>
 
+      {/* Affiliate */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h2 className="text-3xl font-bold text-center mb-8">Affiliate</h2>
+
+        <div className="text-center mb-8">
+          <p className="text-gray-700 text-lg max-w-2xl mx-auto">
+            Invite others to join NCC 2025 using your referral code. For every
+            successful registration, you’ll earn commissions. Let’s grow
+            together—start sharing now!
+          </p>
+        </div>
+
+        <div className="text-center">
+          <a
+            href="/ncc/affiliates"
+            rel="noopener noreferrer"
+            className="inline-block"
+          >
+            <button className="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-purple-700 hover:to-purple-800 transition-all duration-300 transform hover:scale-105 shadow-lg">
+              Register
+            </button>
+          </a>
+        </div>
+      </div>
+
       {/* Sponsors Section */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <h2 className="text-3xl font-bold text-center mb-8">
