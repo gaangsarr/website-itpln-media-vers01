@@ -14,12 +14,14 @@ export default function AffiliateRegistration() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState("");
+  const [showSuccessPopup, setShowSuccessPopup] = useState(false);
+  const [referralCode, setReferralCode] = useState("");
 
   // Generate unique referral code
   const generateReferralCode = () => {
-    const timestamp = Date.now().toString(36).slice(-4); // ambil 4 karakter terakhir dari timestamp base36
-    const random = Math.random().toString(36).slice(2, 6); // ambil 4 karakter acak
-    return `${timestamp}${random}`.toUpperCase(); // gabungkan dan jadikan kapital
+    const timestamp = Date.now().toString(36).slice(-4);
+    const random = Math.random().toString(36).slice(2, 6);
+    return `${timestamp}${random}`.toUpperCase();
   };
 
   const handleInputChange = (e) => {
@@ -59,7 +61,8 @@ export default function AffiliateRegistration() {
 
     try {
       // Generate unique referral code
-      const referralCode = generateReferralCode();
+      const newReferralCode = generateReferralCode();
+      setReferralCode(newReferralCode);
 
       // Format platform promosi
       const platforms = [...formData.platformPromosi];
@@ -75,12 +78,12 @@ export default function AffiliateRegistration() {
         nomorWhatsApp: formData.nomorWhatsApp,
         akunMediaSosial: formData.akunMediaSosial,
         platformPromosi: platforms.join(", "),
-        referralCode: referralCode,
+        referralCode: newReferralCode,
       };
 
       // Send data to Google Sheets via Google Apps Script
       const scriptUrl =
-        "https://script.google.com/macros/s/AKfycbyklRgkNvQMK2ZgfOvdJ5Enqf-8YELDYeKTaP34NOF9WIe2Q8oT7YGjjWE7G5RV7Hql/exec"; // Ganti dengan URL Web App Anda
+        "https://script.google.com/macros/s/AKfycbyklRgkNvQMK2ZgfOvdJ5Enqf-8YELDYeKTaP34NOF9WIe2Q8oT7YGjjWE7G5RV7Hql/exec";
 
       const response = await fetch(scriptUrl, {
         method: "POST",
@@ -91,34 +94,8 @@ export default function AffiliateRegistration() {
         body: JSON.stringify(submissionData),
       });
 
-      // Format WhatsApp message
-      //       const waMessage = `*PENDAFTARAN AFFILIATE NCC 2025*
-
-      // *Kode Referral Anda: ${referralCode}*
-
-      // Nama: ${submissionData.namaLengkap}
-      // Email: ${submissionData.email}
-      // WhatsApp: ${submissionData.nomorWhatsApp}
-      // Media Sosial: ${submissionData.akunMediaSosial}
-      // Platform Promosi: ${submissionData.platformPromosi}
-      // Waktu Daftar: ${submissionData.timestamp}
-
-      // Terima kasih telah bergabung sebagai Affiliate NCC 2025! 🎉
-
-      // Tim ITPLN Media akan segera menghubungi Anda untuk koordinasi lebih lanjut.`;
-
-      //       // Send to WhatsApp (replace with your WhatsApp number)
-      //       const waNumber = "6285273113795"; // Ganti dengan nomor WhatsApp admin
-      //       const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(
-      //         waMessage
-      //       )}`;
-
-      //       // Open WhatsApp
-      //       window.open(waUrl, "_blank");
-
-      setSubmitMessage(
-        `Pendaftaran berhasil! Kode referral Anda: ${referralCode}. Data telah tersimpan.`
-      );
+      // Show success popup
+      setShowSuccessPopup(true);
 
       // Reset form
       setFormData({
@@ -137,8 +114,20 @@ export default function AffiliateRegistration() {
     setIsSubmitting(false);
   };
 
+  const closePopup = () => {
+    setShowSuccessPopup(false);
+    setReferralCode("");
+  };
+
+  const joinWhatsAppGroup = () => {
+    window.open(
+      "https://chat.whatsapp.com/IXXbSovSKDH4XN8nEbQWUu?mode=ac_t",
+      "_blank"
+    );
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 py-12">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 py-12 relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
@@ -416,6 +405,98 @@ export default function AffiliateRegistration() {
           </p>
         </div>
       </div>
+
+      {/* Success Popup */}
+      {showSuccessPopup && (
+        <div
+          className="fixed inset-0 flex items-center justify-center z-50 p-4"
+          style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
+        >
+          <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto">
+            {/* Header */}
+            <div className="bg-gradient-to-r from-green-500 to-green-600 text-white p-6 rounded-t-2xl text-center">
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg
+                  className="w-8 h-8 text-green-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+              </div>
+              <h2 className="text-2xl font-bold mb-2">Pendaftaran Berhasil!</h2>
+              <p className="text-green-100">
+                Selamat datang sebagai Affiliate NCC 2025
+              </p>
+            </div>
+
+            {/* Content */}
+            <div className="p-6 space-y-6">
+              {/* Referral Code */}
+              <div className="text-center">
+                <h3 className="text-lg font-semibold text-gray-800 mb-3">
+                  Kode Referral Anda:
+                </h3>
+                <div className="bg-purple-100 border-2 border-purple-300 rounded-lg p-4">
+                  <span className="text-2xl font-bold text-purple-800">
+                    {referralCode}
+                  </span>
+                </div>
+                <p className="text-sm text-gray-600 mt-2">
+                  Gunakan kode ini untuk mengajak peserta baru!
+                </p>
+              </div>
+
+              {/* WhatsApp Group Section */}
+              <div className="border-t pt-6">
+                <div className="text-center mb-4">
+                  <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                    Langkah Selanjutnya:
+                  </h3>
+                  <p className="text-gray-600 text-sm mb-4">
+                    <strong>WAJIB</strong> bergabung ke grup WhatsApp affiliate
+                    untuk mendapatkan informasi terbaru!
+                  </p>
+                </div>
+
+                <button
+                  onClick={joinWhatsAppGroup}
+                  className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white py-4 px-6 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-3"
+                >
+                  <svg
+                    className="w-6 h-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" />
+                  </svg>
+                  <span>Gabung Grup WhatsApp</span>
+                </button>
+
+                <p className="text-xs text-red-600 text-center mt-3 font-semibold">
+                  ⚠️ Pastikan Anda bergabung sebelum menutup popup ini!
+                </p>
+              </div>
+            </div>
+
+            {/* Footer */}
+            <div className="bg-gray-50 px-6 py-4 rounded-b-2xl">
+              <button
+                onClick={closePopup}
+                className="w-full bg-gray-300 hover:bg-gray-400 text-gray-800 py-3 px-4 rounded-lg font-semibold transition-colors duration-300"
+              >
+                Tutup
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

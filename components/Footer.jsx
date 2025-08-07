@@ -25,28 +25,32 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.instagram.com/itplnmedia"
+                target="_blank"
                 className="text-gray-300 hover:text-[#FFCC00] transition-colors duration-300"
                 aria-label="Instagram"
               >
                 <i className="ri-instagram-line text-xl"></i>
               </a>
               <a
-                href="#"
+                href="https://www.tiktok.com/@itplnmedia"
+                target="_blank"
                 className="text-gray-300 hover:text-[#FFCC00] transition-colors duration-300"
                 aria-label="TikTok"
               >
                 <i className="ri-tiktok-line text-xl"></i>
               </a>
               <a
-                href="#"
+                href="https://open.spotify.com/show/1uiTGptquFpnTeZeSP8UjU?si=AGw8SCEBRAaqH2wDQD0ecQ"
+                target="_blank"
                 className="text-gray-300 hover:text-[#FFCC00] transition-colors duration-300"
-                aria-label="Twitter"
+                aria-label="Spotify"
               >
-                <i className="ri-twitter-line text-xl"></i>
+                <i className="ri-spotify-line text-xl"></i>
               </a>
               <a
-                href="#"
+                href="https://youtube.com/@itplnmedia"
+                target="_blank"
                 className="text-gray-300 hover:text-[#FFCC00] transition-colors duration-300"
                 aria-label="YouTube"
               >
@@ -64,7 +68,15 @@ const Footer = () => {
                   href="/"
                   className="text-gray-300 hover:text-[#FFCC00] transition-colors duration-300 text-sm"
                 >
-                  Profile
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/ncc"
+                  className="text-gray-300 hover:text-[#FFCC00] transition-colors duration-300 text-sm"
+                >
+                  NCC
                 </Link>
               </li>
               <li>
@@ -72,7 +84,7 @@ const Footer = () => {
                   href="/portfolio"
                   className="text-gray-300 hover:text-[#FFCC00] transition-colors duration-300 text-sm"
                 >
-                  Portfolio
+                  Competencies
                 </Link>
               </li>
               <li>
@@ -80,7 +92,7 @@ const Footer = () => {
                   href="/#artikel"
                   className="text-gray-300 hover:text-[#FFCC00] transition-colors duration-300 text-sm"
                 >
-                  Artikel
+                  Article
                 </Link>
               </li>
               <li>
@@ -88,7 +100,7 @@ const Footer = () => {
                   href="/#testimoni"
                   className="text-gray-300 hover:text-[#FFCC00] transition-colors duration-300 text-sm"
                 >
-                  Testimoni
+                  Testimonials
                 </Link>
               </li>
               <li>
@@ -148,14 +160,14 @@ const Footer = () => {
                 <i className="ri-phone-line text-[#FFCC00]"></i>
                 <div>
                   <p className="text-sm font-medium text-white">Contact us:</p>
-                  <p className="text-sm text-gray-300">0812-3456-7890</p>
+                  <p className="text-sm text-gray-300">0857-3270-5272</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <i className="ri-mail-line text-[#FFCC00]"></i>
                 <div>
                   <p className="text-sm font-medium text-white">Email:</p>
-                  <p className="text-sm text-gray-300">info@itplnmedia.com</p>
+                  <p className="text-sm text-gray-300">itplnmedia@gmail.com</p>
                 </div>
               </div>
             </div>

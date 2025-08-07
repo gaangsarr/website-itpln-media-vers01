@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
         </div>
 
         {/* Main Content dengan padding top untuk navbar */}
-        <div className="pt-16 lg:pt-20">{children}</div>
+        <div className="pt-10 lg:pt-15">{children}</div>
       </body>
     </html>
   );
