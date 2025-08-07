@@ -81,7 +81,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/portfolio"
+                  href="/#competencies"
                   className="text-gray-300 hover:text-[#FFCC00] transition-colors duration-300 text-sm"
                 >
                   Competencies
