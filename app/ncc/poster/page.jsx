@@ -120,7 +120,7 @@ const PosterCompetitionPage = () => {
 
                 {/* Tombol Register */}
                 <a
-                  href="https://forms.gle/QVAfkPQ3jmsuhfoF6"
+                  href="/ncc/daftar"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block"
@@ -287,7 +287,7 @@ const PosterCompetitionPage = () => {
                   delay: 0,
                 },
                 {
-                  event: "Pendaftaran Karya Batch 1",
+                  event: "Pendaftaran Karya Batch 2",
                   date: "2 - 14 Agustus 2025",
                   delay: 100,
                 },
@@ -344,7 +344,7 @@ const PosterCompetitionPage = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               {/* Tombol Register Now */}
               <a
-                href="https://forms.gle/QVAfkPQ3jmsuhfoF6"
+                href="/ncc/daftar"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block"
