@@ -375,14 +375,14 @@ const Step1 = ({
       <label className="block text-sm font-medium text-gray-700 mb-2">
         Kode Referral (Opsional)
       </label>
-      <div className="flex space-x-3">
+      <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3">
         <input
           type="text"
           name="kodeReferral"
           value={formData.kodeReferral}
           onChange={handleInputChange}
           placeholder="Masukkan kode referral"
-          className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+          className="w-full sm:flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
         />
         <button
           type="button"
@@ -390,7 +390,7 @@ const Step1 = ({
           disabled={
             !formData.kodeReferral.trim() || referralValidation.isValidating
           }
-          className="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2"
+          className="w-full sm:w-auto px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
         >
           {referralValidation.isValidating ? (
             <>
