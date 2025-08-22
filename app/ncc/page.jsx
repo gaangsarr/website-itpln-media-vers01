@@ -344,6 +344,10 @@ const NCCLandingPage = () => {
                   event: "Pendaftaran Karya Batch 2",
                 },
                 {
+                  date: "15 - 24 Agustus 2025:",
+                  event: "Pendaftaran Karya EXTENDED",
+                },
+                {
                   date: "30 - 31 Agustus 2025:",
                   event: "Pengumpulan Karya Batch 1 & 2",
                 },
