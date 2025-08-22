@@ -331,43 +331,110 @@ const NCCLandingPage = () => {
           <h2 className="text-3xl font-bold text-center mb-12">Key Dates</h2>
         </ScrollAnimationWrapper>
 
-        <ScrollAnimationWrapper animation="scaleIn" delay={200}>
-          <div className="bg-gradient-to-br from-purple-600 to-purple-800 rounded-2xl p-8 text-white">
+        <ScrollAnimationWrapper animation="fadeInUp" delay={200}>
+          <div className="bg-white rounded-2xl shadow-lg p-8">
             <div className="space-y-6">
               {[
                 {
-                  date: "17 Juli - 1 Agustus 2025:",
                   event: "Pendaftaran Karya Batch 1",
+                  date: "17 Juli - 1 Agustus 2025",
+                  delay: 0,
+                  strikethrough: true,
                 },
                 {
-                  date: "2 - 14 Agustus 2025:",
                   event: "Pendaftaran Karya Batch 2",
+                  date: "2 - 14 Agustus 2025",
+                  delay: 100,
+                  strikethrough: true,
                 },
                 {
-                  date: "15 - 24 Agustus 2025:",
                   event: "Pendaftaran Karya EXTENDED",
+                  date: "15 - 24 Agustus 2025",
+                  delay: 200,
+                  highlight: true,
                 },
                 {
-                  date: "30 - 31 Agustus 2025:",
                   event: "Pengumpulan Karya Batch 1 & 2",
+                  date: "30 - 31 Agustus 2025",
+                  delay: 300,
                 },
                 {
-                  date: "1 - 12 September 2025:",
                   event: "Penilaian & Kurasi Karya",
+                  date: "1 - 12 September 2025",
+                  delay: 400,
                 },
                 {
-                  date: "15 September 2025:",
-                  event: "Awarding & Seminar Nasional",
+                  event: "Awarding & Seminar Nasional NCC 2025",
+                  date: "15 September 2025",
+                  delay: 500,
                 },
               ].map((item, index) => (
                 <ScrollAnimationWrapper
                   key={index}
                   animation="fadeInLeft"
-                  delay={index * 100}
+                  delay={item.delay}
                 >
-                  <div>
-                    <h3 className="text-xl font-bold mb-2">{item.date}</h3>
-                    <p className="text-purple-100">{item.event}</p>
+                  <div
+                    className={`flex items-start space-x-4 p-4 rounded-lg transition-all duration-300 ${
+                      item.highlight
+                        ? "bg-gradient-to-r from-purple-100 to-pink-100 border-2 border-purple-300 shadow-lg transform scale-105"
+                        : item.strikethrough
+                        ? "bg-gray-50 opacity-60"
+                        : "hover:bg-gray-50"
+                    }`}
+                  >
+                    <div
+                      className={`flex-shrink-0 w-4 h-4 rounded-full mt-1 ${
+                        item.highlight
+                          ? "bg-gradient-to-r from-purple-500 to-pink-500 shadow-lg"
+                          : item.strikethrough
+                          ? "bg-gray-400"
+                          : "bg-purple-600"
+                      }`}
+                    />
+                    <div className="flex-1">
+                      <h3
+                        className={`font-bold transition-all duration-300 ${
+                          item.highlight
+                            ? "text-xl text-purple-800 font-extrabold"
+                            : item.strikethrough
+                            ? "text-lg text-gray-500 line-through"
+                            : "text-lg text-gray-800"
+                        }`}
+                      >
+                        {item.event}
+                        {item.highlight && (
+                          <span className="ml-3 inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-purple-500 to-pink-500 text-white animate-pulse">
+                            🔥 OPEN NOW!
+                          </span>
+                        )}
+                      </h3>
+                      <p
+                        className={`mt-1 ${
+                          item.highlight
+                            ? "text-purple-600 font-semibold"
+                            : item.strikethrough
+                            ? "text-gray-400 line-through"
+                            : "text-gray-600"
+                        }`}
+                      >
+                        {item.date}
+                      </p>
+                      {item.highlight && (
+                        <div className="mt-2 flex items-center space-x-2">
+                          <span className="text-sm text-purple-700 font-medium">
+                            ⚡ Kesempatan terakhir untuk mendaftar!
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                    {item.highlight && (
+                      <div className="flex-shrink-0">
+                        <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center animate-bounce shadow-lg">
+                          <span className="text-white text-xl">🎯</span>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </ScrollAnimationWrapper>
               ))}
