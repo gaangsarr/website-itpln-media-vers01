@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -15,11 +16,15 @@ const Navbar = () => {
       <div className="container mx-auto">
         <div className="navbar-box flex items-center justify-between">
           <div className="logo">
-            <img
-              src="/logo-navbar.png"
-              alt="ITPLN Media Logo"
-              className="w-32 h-auto lg:w-[221px] lg:h-[57px]"
-            />
+            <Link href={"/"}>
+              <Image
+                src="/logo-navbar.png"
+                alt="ITPLN Media Logo"
+                width={221}
+                height={57}
+                className="w-32 h-auto lg:w-[221px] lg:h-[57px] cursor-pointer"
+              />
+            </Link>
           </div>
 
           {/* Desktop Menu */}

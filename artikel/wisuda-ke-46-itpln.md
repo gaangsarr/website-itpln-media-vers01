@@ -3,7 +3,7 @@ title: "Wisuda ke-46 ITPLN: Momen Bersejarah di Taman Mini Indonesia Indah"
 date: "2025-05-22"
 author: "ITPLN Media"
 category: "Event"
-image: "/artikel-1.jpg"
+image: "/wisuda_ke-46.png"
 excerpt: "Hai sobat ITP PLN! Wisuda ke-46 kemarin sukses banget digelar di Sasana Kriya, Taman Mini Indonesia Indah, pada hari Kamis, 22 Mei 2025."
 readTime: 5
 ---

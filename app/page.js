@@ -104,26 +104,30 @@ export default async function Home() {
             {/* Description */}
             <div className="space-y-4">
               <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-justify">
-                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
-                faucibus ex sapien vitae pellentesque sem placerat. In id cursus
-                mi pretium tellus duis convallis. Tempus leo eu genean sed diam
-                urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum
-                egestas.
+                ITPLN Media adalah Unit Kegiatan Mahasiswa yang bergerak di
+                bidang media kreatif dan komunikasi. Kami hadir untuk
+                mengembangkan potensi mahasiswa dalam dunia digital, mulai dari
+                pembuatan konten, desain grafis, fotografi, videografi, hingga
+                pengembangan website. Dengan semangat "Creativity to Beyond",
+                kami berkomitmen untuk terus berinovasi dan memberikan karya
+                terbaik bagi Institut Teknologi PLN dan masyarakat luas.
               </p>
             </div>
 
             {/* CTA Button */}
             <div className="pt-2">
-              <button className="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 sm:px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 text-sm sm:text-base">
-                Learn More About Us
-              </button>
+              <Link href="#about">
+                <button className="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 sm:px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 text-sm sm:text-base">
+                  Learn More About Us
+                </button>
+              </Link>
             </div>
           </div>
         </div>
       </div>
 
       {/* About Us */}
-      <div className="relative z-10">
+      <div className="relative z-10" id="about">
         <div className="bg-[#F8F8F8] py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             {/* About Us Header */}
@@ -132,49 +136,41 @@ export default async function Home() {
                 About us
               </h2>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
-                Lorem ipsum dolor sit amet
+                Wadah Kreativitas Mahasiswa
                 <br />
-                consectetur <span className="text-purple-500">
-                  adipiscing
-                </span>{" "}
-                elit.
+                Institut Teknologi <span className="text-[#00A2B9]">PLN</span>
               </h1>
               <p className="text-gray-600 text-base sm:text-lg mt-6 max-w-4xl mx-auto leading-relaxed">
-                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
-                faucibus ex sapien vitae pellentesque sem placerat. In id cursus
-                mi pretium tellus duis convallis. Tempus leo eu genean sed diam
-                urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum
-                egestas. Iaculis massa nisl malesuada lacinia integer nunc
-                posuere. Ut hendrerit semper vel class aptent taciti sociosqu.
-                Ad litora torquent per conubia nostra inceptos himenaeos.
+                ITPLN Media berdiri sebagai organisasi mahasiswa yang fokus pada
+                pengembangan kemampuan di bidang media kreatif dan teknologi
+                informasi. Kami memiliki divisi yang lengkap mulai dari Social
+                Media, Broadcasting, Photography, Videography, Graphic Design,
+                hingga Web Development. Setiap anggota kami dibekali dengan
+                skill yang mumpuni untuk menghadapi tantangan dunia digital yang
+                terus berkembang. Bersama ITPLN Media, mari wujudkan kreativitas
+                tanpa batas!
               </p>
             </div>
 
             {/* Statistics Cards */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 max-w-5xl mx-auto">
+            <div className="grid grid-cols-3 lg:grid-cols-3 gap-4 lg:gap-6 max-w-5xl mx-auto">
               <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div className="text-4xl lg:text-5xl font-bold text-[#471396] mb-2">
-                  70+
+                  50+
                 </div>
-                <div className="text-gray-600 font-medium">Members</div>
+                <div className="text-gray-600 font-medium">Active Members</div>
               </div>
               <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div className="text-4xl lg:text-5xl font-bold text-[#471396] mb-2">
-                  70+
+                  99+
                 </div>
-                <div className="text-gray-600 font-medium">Projects</div>
+                <div className="text-gray-600 font-medium">Projects Done</div>
               </div>
               <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div className="text-4xl lg:text-5xl font-bold text-[#471396] mb-2">
-                  70+
+                  30+
                 </div>
-                <div className="text-gray-600 font-medium">Awards</div>
-              </div>
-              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="text-4xl lg:text-5xl font-bold text-[#471396] mb-2">
-                  70+
-                </div>
-                <div className="text-gray-600 font-medium">Clients</div>
+                <div className="text-gray-600 font-medium">Happy Clients</div>
               </div>
             </div>
           </div>
@@ -186,9 +182,15 @@ export default async function Home() {
         <div className="bg-white py-25 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             {/* Header */}
-            <h2 className="text-4xl sm:text-5xl font-bold text-[#471396] text-center mb-12">
-              Our Competencies
-            </h2>
+            <div className="text-center mb-12">
+              <h2 className="text-4xl sm:text-5xl font-bold text-[#471396] mb-4">
+                Our Competencies
+              </h2>
+              <p className="text-gray-600 text-base sm:text-lg max-w-3xl mx-auto">
+                Divisi-divisi unggulan ITPLN Media yang siap membantu mewujudkan
+                ide kreatif Anda
+              </p>
+            </div>
 
             {/* Competency Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
@@ -196,72 +198,93 @@ export default async function Home() {
               <div className="bg-gradient-to-br from-[#471396] to-purple-600 rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                 <div className="bg-gray-300 rounded-2xl h-48 mb-4 flex items-center justify-center">
                   <span className="text-gray-500 text-sm">
-                    Image Placeholder
+                    Social Media Management
                   </span>
                 </div>
-                <h3 className="text-2xl font-bold text-white text-center">
+                <h3 className="text-2xl font-bold text-white text-center mb-2">
                   Social Media
                 </h3>
+                <p className="text-purple-100 text-center text-sm">
+                  Strategi konten, manajemen akun, dan kampanye digital yang
+                  efektif
+                </p>
               </div>
 
               {/* Broadcasting Card */}
               <div className="bg-gradient-to-br from-[#471396] to-purple-600 rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                 <div className="bg-gray-300 rounded-2xl h-48 mb-4 flex items-center justify-center">
                   <span className="text-gray-500 text-sm">
-                    Image Placeholder
+                    Broadcasting & Audio
                   </span>
                 </div>
-                <h3 className="text-2xl font-bold text-white text-center">
+                <h3 className="text-2xl font-bold text-white text-center mb-2">
                   Broadcasting
                 </h3>
+                <p className="text-purple-100 text-center text-sm">
+                  Produksi audio, podcast, dan konten broadcasting berkualitas
+                  tinggi
+                </p>
               </div>
 
               {/* Photography Card */}
               <div className="bg-gradient-to-br from-[#471396] to-purple-600 rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                 <div className="bg-gray-300 rounded-2xl h-48 mb-4 flex items-center justify-center">
                   <span className="text-gray-500 text-sm">
-                    Image Placeholder
+                    Professional Photography
                   </span>
                 </div>
-                <h3 className="text-2xl font-bold text-white text-center">
+                <h3 className="text-2xl font-bold text-white text-center mb-2">
                   Photography
                 </h3>
+                <p className="text-purple-100 text-center text-sm">
+                  Dokumentasi event, portrait, dan foto produk dengan kualitas
+                  profesional
+                </p>
               </div>
 
               {/* Videography Card */}
               <div className="bg-gradient-to-br from-[#471396] to-purple-600 rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                 <div className="bg-gray-300 rounded-2xl h-48 mb-4 flex items-center justify-center">
                   <span className="text-gray-500 text-sm">
-                    Image Placeholder
+                    Video Production
                   </span>
                 </div>
-                <h3 className="text-2xl font-bold text-white text-center">
+                <h3 className="text-2xl font-bold text-white text-center mb-2">
                   Videography
                 </h3>
+                <p className="text-purple-100 text-center text-sm">
+                  Produksi video company profile, event, dan konten kreatif
+                  lainnya
+                </p>
               </div>
 
               {/* Graphic Design Card */}
               <div className="bg-gradient-to-br from-[#471396] to-purple-600 rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                 <div className="bg-gray-300 rounded-2xl h-48 mb-4 flex items-center justify-center">
-                  <span className="text-gray-500 text-sm">
-                    Image Placeholder
-                  </span>
+                  <span className="text-gray-500 text-sm">Creative Design</span>
                 </div>
-                <h3 className="text-2xl font-bold text-white text-center">
+                <h3 className="text-2xl font-bold text-white text-center mb-2">
                   Graphic Design
                 </h3>
+                <p className="text-purple-100 text-center text-sm">
+                  Desain logo, poster, branding, dan material visual yang
+                  menarik
+                </p>
               </div>
 
               {/* Web Development Card */}
               <div className="bg-gradient-to-br from-[#471396] to-purple-600 rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                 <div className="bg-gray-300 rounded-2xl h-48 mb-4 flex items-center justify-center">
                   <span className="text-gray-500 text-sm">
-                    Image Placeholder
+                    Modern Web Solutions
                   </span>
                 </div>
-                <h3 className="text-2xl font-bold text-white text-center">
+                <h3 className="text-2xl font-bold text-white text-center mb-2">
                   Web Development
                 </h3>
+                <p className="text-purple-100 text-center text-sm">
+                  Pembuatan website modern, responsif, dan user-friendly
+                </p>
               </div>
             </div>
           </div>
@@ -279,7 +302,7 @@ export default async function Home() {
               </h2>
               <p className="text-gray-600 text-base sm:text-lg max-w-3xl mx-auto">
                 Baca artikel terbaru dari ITPLN Media tentang berbagai topik
-                menarik
+                menarik seputar teknologi, kreativitas, dan dunia digital
               </p>
             </div>
 
@@ -320,7 +343,8 @@ export default async function Home() {
                 Testimoni
               </h2>
               <p className="text-gray-600 text-base sm:text-lg max-w-3xl mx-auto">
-                Apa yang mereka katakan tentang ITPLN Media
+                Apa yang klien dan partner katakan tentang kualitas kerja ITPLN
+                Media
               </p>
             </div>
 
@@ -344,7 +368,7 @@ export default async function Home() {
 
       {/* Rate Card Section */}
       <div className="relative z-10" id="ratecard">
-        <div className="bg-white py-25 px-4 sm:px-6 lg:px-8">
+        <div className="bg-[#F8F8F8] py-25 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             {/* Header */}
             <div className="text-center mb-12">
@@ -352,226 +376,54 @@ export default async function Home() {
                 Rate Card
               </h2>
               <p className="text-gray-600 text-base sm:text-lg max-w-3xl mx-auto">
-                Belum ada rate card yang tersedia.
+                Paket layanan ITPLN Media dengan harga terjangkau untuk berbagai
+                kebutuhan kreatif Anda
               </p>
             </div>
 
-            {/* Rate Cards Grid */}
-            {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto"> */}
-            {/* Social Media Package */}
-            {/* <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-purple-100">
-                <div className="text-center mb-6">
-                  <h3 className="text-purple-600 text-lg font-semibold mb-2">
-                    Social Media
-                  </h3>
-                  <div className="text-3xl font-bold text-[#471396] mb-1">
-                    Rp. 500.000
-                  </div>
-                  <div className="text-gray-500 text-sm">per bulan</div>
+            {/* Coming Soon Message */}
+            <div className="text-center py-12">
+              <div className="bg-white rounded-2xl p-8 max-w-md mx-auto shadow-lg">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg
+                    className="w-8 h-8 text-purple-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    ></path>
+                  </svg>
                 </div>
-                <ul className="space-y-3 mb-6 text-sm">
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                    Content Planning & Strategy
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                    15 Feed Posts per bulan
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                    Instagram Stories
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                    Basic Analytics Report
-                  </li>
-                </ul>
-                <button className="w-full bg-[#471396] text-white py-3 rounded-full font-semibold hover:bg-purple-700 transition-colors duration-300">
-                  Contact
-                </button>
-              </div> */}
-
-            {/* Photography Package */}
-            {/* <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-purple-100">
-                <div className="text-center mb-6">
-                  <h3 className="text-purple-600 text-lg font-semibold mb-2">
-                    Photography
-                  </h3>
-                  <div className="text-3xl font-bold text-[#471396] mb-1">
-                    Rp. 750.000
-                  </div>
-                  <div className="text-gray-500 text-sm">per project</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  Coming Soon
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Rate card kami sedang dalam tahap finalisasi. Untuk konsultasi
+                  gratis dan penawaran khusus, silakan hubungi kami langsung.
+                </p>
+                <div className="space-y-3">
+                  <a
+                    href="https://wa.me/6285732705272"
+                    target="_blank"
+                    className="w-full bg-green-500 text-white py-3 px-4 rounded-lg font-semibold hover:bg-green-600 transition-colors inline-block"
+                  >
+                    WhatsApp Kami
+                  </a>
+                  <a
+                    href="https://www.instagram.com/itplnmedia/"
+                    target="_blank"
+                    className="w-full bg-purple-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors inline-block"
+                  >
+                    Instagram Kami
+                  </a>
                 </div>
-                <ul className="space-y-3 mb-6 text-sm">
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                    4 Hours Photo Session
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                    50+ Edited Photos
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                    High Resolution Files
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                    Online Gallery Access
-                  </li>
-                </ul>
-                <button className="w-full bg-[#471396] text-white py-3 rounded-full font-semibold hover:bg-purple-700 transition-colors duration-300">
-                  Contact
-                </button>
-              </div> */}
-
-            {/* Videography Package */}
-            {/* <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-purple-100">
-                <div className="text-center mb-6">
-                  <h3 className="text-purple-600 text-lg font-semibold mb-2">
-                    Videography
-                  </h3>
-                  <div className="text-3xl font-bold text-[#471396] mb-1">
-                    Rp. 1.500.000
-                  </div>
-                  <div className="text-gray-500 text-sm">per project</div>
-                </div>
-                <ul className="space-y-3 mb-6 text-sm">
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                    Full Day Shooting
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                    Professional Editing
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                    4K Video Quality
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                    Color Grading & Audio
-                  </li>
-                </ul>
-                <button className="w-full bg-[#471396] text-white py-3 rounded-full font-semibold hover:bg-purple-700 transition-colors duration-300">
-                  Contact
-                </button>
-              </div> */}
-
-            {/* Graphic Design Package */}
-            {/* <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-purple-100">
-                <div className="text-center mb-6">
-                  <h3 className="text-purple-600 text-lg font-semibold mb-2">
-                    TBA
-                  </h3>
-                  <div className="text-3xl font-bold text-[#471396] mb-1">
-                    TBA
-                  </div>
-                  <div className="text-gray-500 text-sm">TBA</div>
-                </div>
-                <ul className="space-y-3 mb-6 text-sm">
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                    TBA
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                    TBA
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                    TBA
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                    TBA
-                  </li>
-                </ul>
-                <button className="w-full bg-[#471396] text-white py-3 rounded-full font-semibold hover:bg-purple-700 transition-colors duration-300">
-                  Contact
-                </button>
-              </div> */}
-
-            {/* Web Development Package */}
-            {/* <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-purple-100">
-                <div className="text-center mb-6">
-                  <h3 className="text-purple-600 text-lg font-semibold mb-2">
-                    Web Development
-                  </h3>
-                  <div className="text-3xl font-bold text-[#471396] mb-1">
-                    Rp. 2.500.000
-                  </div>
-                  <div className="text-gray-500 text-sm">per project</div>
-                </div>
-                <ul className="space-y-3 mb-6 text-sm">
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                    Responsive Design
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                    Modern Framework
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                    SEO Optimization
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                    3 Months Support
-                  </li>
-                </ul>
-                <button className="w-full bg-[#471396] text-white py-3 rounded-full font-semibold hover:bg-purple-700 transition-colors duration-300">
-                  Contact
-                </button>
-              </div> */}
-
-            {/* Event Organizer Package */}
-            {/* <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-purple-100">
-                <div className="text-center mb-6">
-                  <h3 className="text-purple-600 text-lg font-semibold mb-2">
-                    Event Organizer
-                  </h3>
-                  <div className="text-3xl font-bold text-[#471396] mb-1">
-                    Rp. 5.000.000
-                  </div>
-                  <div className="text-gray-500 text-sm">per event</div>
-                </div>
-                <ul className="space-y-3 mb-6 text-sm">
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                    Event Planning & Coordination
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                    Venue Management
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                    Documentation Team
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                    Post-Event Report
-                  </li>
-                </ul>
-                <button className="w-full bg-[#471396] text-white py-3 rounded-full font-semibold hover:bg-purple-700 transition-colors duration-300">
-                  Contact
-                </button>
-              </div> */}
-            {/* </div> */}
-
-            {/* Custom Package CTA */}
-            {/* <div className="text-center mt-12">
-              <p className="text-gray-600 mb-4">
-                Butuh paket khusus? Hubungi kami untuk konsultasi gratis
-              </p>
-              <button className="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 text-base">
-                Konsultasi Gratis
-              </button>
-            </div> */}
+              </div>
+            </div>
           </div>
         </div>
       </div>
