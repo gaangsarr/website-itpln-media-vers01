@@ -619,6 +619,10 @@ const Step2 = ({
 );
 
 const NCCRegistrationForm = () => {
+  // Status pendaftaran - ubah ke true untuk membuka kembali pendaftaran
+  const PENDAFTARAN_DIBUKA = false;
+  const TANGGAL_TUTUP = "25 Agustus 2025";
+
   const [currentStep, setCurrentStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccessPopup, setShowSuccessPopup] = useState(false);
@@ -963,78 +967,122 @@ const NCCRegistrationForm = () => {
       />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Progress Bar */}
-        <div className="mb-8">
-          <div className="flex items-center justify-center space-x-4">
-            <div
-              className={`flex items-center space-x-2 ${
-                currentStep >= 1 ? "text-purple-600" : "text-gray-400"
-              }`}
-            >
-              <div
-                className={`w-8 h-8 rounded-full flex items-center justify-center border-2 ${
-                  currentStep >= 1
-                    ? "border-purple-600 bg-purple-600 text-white"
-                    : "border-gray-300"
-                }`}
-              >
-                1
+        {/* Jika pendaftaran ditutup - tampilkan hanya pesan */}
+        {!PENDAFTARAN_DIBUKA && (
+          <div className="flex items-center justify-center min-h-[70vh]">
+            <div className="bg-white rounded-2xl p-8 max-w-md text-center shadow-2xl">
+              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <XCircle className="w-8 h-8 text-red-500" />
               </div>
-              <span className="font-medium">Data Diri</span>
-            </div>
-            <div
-              className={`w-16 h-1 ${
-                currentStep >= 2 ? "bg-purple-600" : "bg-gray-300"
-              }`}
-            ></div>
-            <div
-              className={`flex items-center space-x-2 ${
-                currentStep >= 2 ? "text-purple-600" : "text-gray-400"
-              }`}
-            >
-              <div
-                className={`w-8 h-8 rounded-full flex items-center justify-center border-2 ${
-                  currentStep >= 2
-                    ? "border-purple-600 bg-purple-600 text-white"
-                    : "border-gray-300"
-                }`}
-              >
-                2
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                Pendaftaran Ditutup
+              </h2>
+              <p className="text-gray-600 mb-4">
+                Maaf, pendaftaran NCC 2025 telah ditutup pada tanggal{" "}
+                {TANGGAL_TUTUP}.
+              </p>
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
+                <p className="text-sm text-blue-800">
+                  📢 Pantau terus Instagram{" "}
+                  <a
+                    href="https://instagram.com/itplnmedia"
+                    target="_blank"
+                    className="font-semibold hover:underline"
+                  >
+                    @itplnmedia
+                  </a>{" "}
+                  untuk update selanjutnya!
+                </p>
               </div>
-              <span className="font-medium">Pembayaran</span>
+              <button
+                onClick={() =>
+                  window.open("https://instagram.com/itplnmedia", "_blank")
+                }
+                className="w-full bg-purple-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+              >
+                Instagram
+              </button>
             </div>
           </div>
-        </div>
+        )}
 
-        {/* Form Content */}
-        <form
-          className="bg-white rounded-xl shadow-lg p-8"
-          onSubmit={handleSubmit}
-        >
-          {currentStep === 1 ? (
-            <Step1
-              formData={formData}
-              handleInputChange={handleInputChange}
-              handleFileUpload={handleFileUpload}
-              uploadStatus={uploadStatus}
-              referralValidation={referralValidation}
-              handleReferralCheck={handleReferralCheck}
-              handleNext={handleNext}
-            />
-          ) : (
-            <Step2
-              formData={formData}
-              handleInputChange={handleInputChange}
-              handleFileUpload={handleFileUpload}
-              uploadStatus={uploadStatus}
-              handleSubmit={handleSubmit}
-              isSubmitting={isSubmitting}
-              setCurrentStep={setCurrentStep}
-              referralValidation={referralValidation}
-              formatPrice={formatPrice}
-            />
-          )}
-        </form>
+        {/* Form normal jika pendaftaran dibuka */}
+        {PENDAFTARAN_DIBUKA && (
+          <>
+            {/* Progress Bar */}
+            <div className="mb-8">
+              <div className="flex items-center justify-center space-x-4">
+                <div
+                  className={`flex items-center space-x-2 ${
+                    currentStep >= 1 ? "text-purple-600" : "text-gray-400"
+                  }`}
+                >
+                  <div
+                    className={`w-8 h-8 rounded-full flex items-center justify-center border-2 ${
+                      currentStep >= 1
+                        ? "border-purple-600 bg-purple-600 text-white"
+                        : "border-gray-300"
+                    }`}
+                  >
+                    1
+                  </div>
+                  <span className="font-medium">Data Diri</span>
+                </div>
+                <div
+                  className={`w-16 h-1 ${
+                    currentStep >= 2 ? "bg-purple-600" : "bg-gray-300"
+                  }`}
+                ></div>
+                <div
+                  className={`flex items-center space-x-2 ${
+                    currentStep >= 2 ? "text-purple-600" : "text-gray-400"
+                  }`}
+                >
+                  <div
+                    className={`w-8 h-8 rounded-full flex items-center justify-center border-2 ${
+                      currentStep >= 2
+                        ? "border-purple-600 bg-purple-600 text-white"
+                        : "border-gray-300"
+                    }`}
+                  >
+                    2
+                  </div>
+                  <span className="font-medium">Pembayaran</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Form Content */}
+            <form
+              className="bg-white rounded-xl shadow-lg p-8"
+              onSubmit={handleSubmit}
+            >
+              {currentStep === 1 ? (
+                <Step1
+                  formData={formData}
+                  handleInputChange={handleInputChange}
+                  handleFileUpload={handleFileUpload}
+                  uploadStatus={uploadStatus}
+                  referralValidation={referralValidation}
+                  handleReferralCheck={handleReferralCheck}
+                  handleNext={handleNext}
+                />
+              ) : (
+                <Step2
+                  formData={formData}
+                  handleInputChange={handleInputChange}
+                  handleFileUpload={handleFileUpload}
+                  uploadStatus={uploadStatus}
+                  handleSubmit={handleSubmit}
+                  isSubmitting={isSubmitting}
+                  setCurrentStep={setCurrentStep}
+                  referralValidation={referralValidation}
+                  formatPrice={formatPrice}
+                />
+              )}
+            </form>
+          </>
+        )}
       </div>
     </div>
   );

@@ -120,7 +120,6 @@ const Reels = () => {
                 {/* Tombol Register */}
                 <a
                   href="/ncc/daftar"
-                  target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block"
                 >
@@ -297,7 +296,8 @@ const Reels = () => {
                   event: "Pendaftaran Karya EXTENDED",
                   date: "15 - 24 Agustus 2025",
                   delay: 200,
-                  highlight: true,
+                  highlight: false,
+                  strikethrough: true,
                 },
                 {
                   event: "Pengumpulan Karya Batch 1 & 2",
@@ -408,7 +408,6 @@ const Reels = () => {
               {/* Tombol Register Now */}
               <a
                 href="/ncc/daftar"
-                target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block"
               >

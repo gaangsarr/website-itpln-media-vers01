@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Strikethrough } from "lucide-react";
 import Footer from "@/components/Footer";
 
 // Custom hook untuk scroll animations
@@ -351,12 +351,14 @@ const NCCLandingPage = () => {
                   event: "Pendaftaran Karya EXTENDED",
                   date: "15 - 24 Agustus 2025",
                   delay: 200,
-                  highlight: true,
+                  highlight: false,
+                  strikethrough: true,
                 },
                 {
                   event: "Pengumpulan Karya Batch 1 & 2",
                   date: "30 - 31 Agustus 2025",
                   delay: 300,
+                  highlight: true,
                 },
                 {
                   event: "Penilaian & Kurasi Karya",
@@ -405,7 +407,7 @@ const NCCLandingPage = () => {
                         {item.event}
                         {item.highlight && (
                           <span className="ml-3 inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-purple-500 to-pink-500 text-white animate-pulse">
-                            🔥 OPEN NOW!
+                            COMING SOON!
                           </span>
                         )}
                       </h3>
@@ -423,7 +425,7 @@ const NCCLandingPage = () => {
                       {item.highlight && (
                         <div className="mt-2 flex items-center space-x-2">
                           <span className="text-sm text-purple-700 font-medium">
-                            ⚡ Kesempatan terakhir untuk mendaftar!
+                            ⚡ Kumpulkan karya terbaikmu!
                           </span>
                         </div>
                       )}
