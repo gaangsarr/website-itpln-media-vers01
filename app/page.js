@@ -108,7 +108,7 @@ export default async function Home() {
                 bidang media kreatif dan komunikasi. Kami hadir untuk
                 mengembangkan potensi mahasiswa dalam dunia digital, mulai dari
                 pembuatan konten, desain grafis, fotografi, videografi, hingga
-                pengembangan website. Dengan semangat "Creativity to Beyond",
+                pengembangan website. Dengan semangat {"Creativity to Beyond"},
                 kami berkomitmen untuk terus berinovasi dan memberikan karya
                 terbaik bagi Institut Teknologi PLN dan masyarakat luas.
               </p>
