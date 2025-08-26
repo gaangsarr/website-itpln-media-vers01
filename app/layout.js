@@ -1,6 +1,7 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 // import "remixicon/fonts/remixicon.css";
 
 const fontPoppins = Poppins({
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
 
         {/* Main Content dengan padding top untuk navbar */}
         <div className="pt-10 lg:pt-15">{children}</div>
+        <SpeedInsights />
       </body>
     </html>
   );
