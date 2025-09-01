@@ -300,18 +300,25 @@ const Reels = () => {
                   strikethrough: true,
                 },
                 {
-                  event: "Pengumpulan Karya Batch 1 & 2",
-                  date: "30 - 31 Agustus 2025",
+                  event: "Pendaftaran LAST CALL",
+                  date: "30 Agustus - 10 September 2025",
+                  delay: 200,
+                  highlight: false,
+                  strikethrough: false,
+                },
+                {
+                  event: "Pengumpulan Karya",
+                  date: "TBA",
                   delay: 300,
                 },
                 {
                   event: "Penilaian & Kurasi Karya",
-                  date: "1 - 12 September 2025",
+                  date: "TBA",
                   delay: 400,
                 },
                 {
                   event: "Awarding & Seminar Nasional NCC 2025",
-                  date: "15 September 2025",
+                  date: "TBA",
                   delay: 500,
                 },
               ].map((item, index) => (

@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { ArrowRight, Strikethrough } from "lucide-react";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 
 // Custom hook untuk scroll animations
 const useScrollAnimation = (threshold = 0.1) => {
@@ -355,20 +356,27 @@ const NCCLandingPage = () => {
                   strikethrough: true,
                 },
                 {
-                  event: "Pengumpulan Karya Batch 1 & 2",
-                  date: "30 - 31 Agustus 2025",
+                  event: "Pendaftaran LAST CALL",
+                  date: "30 Agustus - 10 September 2025",
                   delay: 300,
                   highlight: true,
+                  strikethrough: false,
+                },
+                {
+                  event: "Pengumpulan Karya",
+                  date: "TBA",
+                  delay: 400,
+                  highlight: false,
                 },
                 {
                   event: "Penilaian & Kurasi Karya",
-                  date: "1 - 12 September 2025",
-                  delay: 400,
+                  date: "TBA",
+                  delay: 500,
                 },
                 {
                   event: "Awarding & Seminar Nasional NCC 2025",
-                  date: "15 September 2025",
-                  delay: 500,
+                  date: "TBA",
+                  delay: 600,
                 },
               ].map((item, index) => (
                 <ScrollAnimationWrapper
@@ -376,68 +384,135 @@ const NCCLandingPage = () => {
                   animation="fadeInLeft"
                   delay={item.delay}
                 >
-                  <div
-                    className={`flex items-start space-x-4 p-4 rounded-lg transition-all duration-300 ${
-                      item.highlight
-                        ? "bg-gradient-to-r from-purple-100 to-pink-100 border-2 border-purple-300 shadow-lg transform scale-105"
-                        : item.strikethrough
-                        ? "bg-gray-50 opacity-60"
-                        : "hover:bg-gray-50"
-                    }`}
-                  >
-                    <div
-                      className={`flex-shrink-0 w-4 h-4 rounded-full mt-1 ${
-                        item.highlight
-                          ? "bg-gradient-to-r from-purple-500 to-pink-500 shadow-lg"
-                          : item.strikethrough
-                          ? "bg-gray-400"
-                          : "bg-purple-600"
-                      }`}
-                    />
-                    <div className="flex-1">
-                      <h3
-                        className={`font-bold transition-all duration-300 ${
+                  {item.highlight ? (
+                    <Link href="/ncc/daftar" className="block">
+                      <div
+                        className={`flex items-start space-x-4 p-4 rounded-lg transition-all duration-300 cursor-pointer hover:scale-105 ${
                           item.highlight
-                            ? "text-xl text-purple-800 font-extrabold"
+                            ? "bg-gradient-to-r from-purple-100 to-pink-100 border-2 border-purple-300 shadow-lg transform scale-105"
                             : item.strikethrough
-                            ? "text-lg text-gray-500 line-through"
-                            : "text-lg text-gray-800"
+                            ? "bg-gray-50 opacity-60"
+                            : "hover:bg-gray-50"
                         }`}
                       >
-                        {item.event}
+                        <div
+                          className={`flex-shrink-0 w-4 h-4 rounded-full mt-1 ${
+                            item.highlight
+                              ? "bg-gradient-to-r from-purple-500 to-pink-500 shadow-lg"
+                              : item.strikethrough
+                              ? "bg-gray-400"
+                              : "bg-purple-600"
+                          }`}
+                        />
+                        <div className="flex-1">
+                          <h3
+                            className={`font-bold transition-all duration-300 ${
+                              item.highlight
+                                ? "text-xl text-purple-800 font-extrabold"
+                                : item.strikethrough
+                                ? "text-lg text-gray-500 line-through"
+                                : "text-lg text-gray-800"
+                            }`}
+                          >
+                            {item.event}
+                            {item.highlight && (
+                              <span className="ml-3 inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-purple-500 to-pink-500 text-white animate-pulse">
+                                NOW!
+                              </span>
+                            )}
+                          </h3>
+                          <p
+                            className={`mt-1 ${
+                              item.highlight
+                                ? "text-purple-600 font-semibold"
+                                : item.strikethrough
+                                ? "text-gray-400 line-through"
+                                : "text-gray-600"
+                            }`}
+                          >
+                            {item.date}
+                          </p>
+                          {item.highlight && (
+                            <div className="mt-2 flex items-center space-x-2">
+                              <span className="text-sm text-purple-700 font-medium">
+                                ⚡ Daftarkan dirimu sekarang juga!
+                              </span>
+                            </div>
+                          )}
+                        </div>
                         {item.highlight && (
-                          <span className="ml-3 inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-purple-500 to-pink-500 text-white animate-pulse">
-                            COMING SOON!
-                          </span>
+                          <div className="flex-shrink-0">
+                            <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center animate-bounce shadow-lg">
+                              <span className="text-white text-xl">🎯</span>
+                            </div>
+                          </div>
                         )}
-                      </h3>
-                      <p
-                        className={`mt-1 ${
+                      </div>
+                    </Link>
+                  ) : (
+                    <div
+                      className={`flex items-start space-x-4 p-4 rounded-lg transition-all duration-300 ${
+                        item.highlight
+                          ? "bg-gradient-to-r from-purple-100 to-pink-100 border-2 border-purple-300 shadow-lg transform scale-105"
+                          : item.strikethrough
+                          ? "bg-gray-50 opacity-60"
+                          : "hover:bg-gray-50"
+                      }`}
+                    >
+                      <div
+                        className={`flex-shrink-0 w-4 h-4 rounded-full mt-1 ${
                           item.highlight
-                            ? "text-purple-600 font-semibold"
+                            ? "bg-gradient-to-r from-purple-500 to-pink-500 shadow-lg"
                             : item.strikethrough
-                            ? "text-gray-400 line-through"
-                            : "text-gray-600"
+                            ? "bg-gray-400"
+                            : "bg-purple-600"
                         }`}
-                      >
-                        {item.date}
-                      </p>
+                      />
+                      <div className="flex-1">
+                        <h3
+                          className={`font-bold transition-all duration-300 ${
+                            item.highlight
+                              ? "text-xl text-purple-800 font-extrabold"
+                              : item.strikethrough
+                              ? "text-lg text-gray-500 line-through"
+                              : "text-lg text-gray-800"
+                          }`}
+                        >
+                          {item.event}
+                          {item.highlight && (
+                            <span className="ml-3 inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-purple-500 to-pink-500 text-white animate-pulse">
+                              NOW!
+                            </span>
+                          )}
+                        </h3>
+                        <p
+                          className={`mt-1 ${
+                            item.highlight
+                              ? "text-purple-600 font-semibold"
+                              : item.strikethrough
+                              ? "text-gray-400 line-through"
+                              : "text-gray-600"
+                          }`}
+                        >
+                          {item.date}
+                        </p>
+                        {item.highlight && (
+                          <div className="mt-2 flex items-center space-x-2">
+                            <span className="text-sm text-purple-700 font-medium">
+                              ⚡ Daftarkan dirimu sekarang juga!
+                            </span>
+                          </div>
+                        )}
+                      </div>
                       {item.highlight && (
-                        <div className="mt-2 flex items-center space-x-2">
-                          <span className="text-sm text-purple-700 font-medium">
-                            ⚡ Kumpulkan karya terbaikmu!
-                          </span>
+                        <div className="flex-shrink-0">
+                          <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center animate-bounce shadow-lg">
+                            <span className="text-white text-xl">🎯</span>
+                          </div>
                         </div>
                       )}
                     </div>
-                    {item.highlight && (
-                      <div className="flex-shrink-0">
-                        <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center animate-bounce shadow-lg">
-                          <span className="text-white text-xl">🎯</span>
-                        </div>
-                      </div>
-                    )}
-                  </div>
+                  )}
                 </ScrollAnimationWrapper>
               ))}
             </div>
@@ -547,6 +622,20 @@ const NCCLandingPage = () => {
         </ScrollAnimationWrapper>
       </div>
       <Footer />
+      {/* Developer Credit */}
+      {/* <div className="bg-gray-50 border-t border-gray-100 py-3">
+        <div className="max-w-7xl mx-auto px-4 text-center">
+          <Link href={"instagram.com/gaangsarr"} target="_blank">
+            <p className="text-xs text-gray-500">
+              Built with ⚡ by{" "}
+              <span className="font-medium text-gray-600">
+                Gangsar Anjasmoro
+              </span>{" "}
+              • 2025
+            </p>
+          </Link>
+        </div>
+      </div> */}
     </div>
   );
 };
