@@ -1,6 +1,6 @@
 ---
-title: "Contoh Artikel Markdown Lengkap"
-date: "2025-07-16"
+title: "GANGSAR GANTENG"
+date: "2025-07-20"
 author: "Divisi Copywriter"
 category: "Panduan"
 image: "/home-1.jpg"

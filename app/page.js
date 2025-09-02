@@ -15,7 +15,7 @@ export default async function Home() {
   return (
     <div className="min-h-screen relative overflow-hidden bg-white">
       {/* Background Squares dengan perbaikan responsif */}
-      <div className="absolute inset-0 z-0 opacity-5">
+      <div className="absolute inset-0 z-0 opacity-10">
         <Squares
           speed={0.5}
           squareSize={40}
