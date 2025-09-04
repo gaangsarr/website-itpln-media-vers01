@@ -30,12 +30,12 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${fontPoppins.className} antialiased`}>
         {/* Fixed Navbar */}
-        <div className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
+        <div className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm -translate-y-0.5">
           <Navbar />
         </div>
 
         {/* Main Content dengan padding top untuk navbar */}
-        <div className="pt-10 lg:pt-15">{children}</div>
+        <div>{children}</div>
         <SpeedInsights />
         <Analytics />
       </body>
