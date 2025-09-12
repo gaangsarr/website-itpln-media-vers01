@@ -621,7 +621,7 @@ const Step2 = ({
 const NCCRegistrationForm = () => {
   // Status pendaftaran - ubah ke true untuk membuka kembali pendaftaran
   const PENDAFTARAN_DIBUKA = false;
-  const TANGGAL_TUTUP = "25 Agustus 2025";
+  const TANGGAL_TUTUP = "10 September 2025";
 
   const [currentStep, setCurrentStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
