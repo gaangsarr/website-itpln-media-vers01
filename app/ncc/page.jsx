@@ -359,14 +359,13 @@ const NCCLandingPage = () => {
                   event: "Pendaftaran LAST CALL",
                   date: "30 Agustus - 10 September 2025",
                   delay: 300,
-                  highlight: true,
-                  strikethrough: false,
+                  strikethrough: true,
                 },
                 {
                   event: "Pengumpulan Karya",
-                  date: "TBA",
+                  date: "12 - 13 September 2025",
                   delay: 400,
-                  highlight: false,
+                  highlight: true,
                 },
                 {
                   event: "Penilaian & Kurasi Karya",
@@ -385,7 +384,11 @@ const NCCLandingPage = () => {
                   delay={item.delay}
                 >
                   {item.highlight ? (
-                    <Link href="/ncc/daftar" className="block">
+                    <Link
+                      href="https://forms.gle/tr1USZa8VEvw5apM9"
+                      target="blank"
+                      className="block"
+                    >
                       <div
                         className={`flex items-start space-x-4 p-4 rounded-lg transition-all duration-300 cursor-pointer hover:scale-105 ${
                           item.highlight
@@ -435,7 +438,7 @@ const NCCLandingPage = () => {
                           {item.highlight && (
                             <div className="mt-2 flex items-center space-x-2">
                               <span className="text-sm text-purple-700 font-medium">
-                                ⚡ Daftarkan dirimu sekarang juga!
+                                KUMPULKAN KARYA TERBAIKMU!!
                               </span>
                             </div>
                           )}
@@ -499,7 +502,7 @@ const NCCLandingPage = () => {
                         {item.highlight && (
                           <div className="mt-2 flex items-center space-x-2">
                             <span className="text-sm text-purple-700 font-medium">
-                              ⚡ Daftarkan dirimu sekarang juga!
+                              KUMPULKAN KARYA TERBAIKMU SEKARANG!!!
                             </span>
                           </div>
                         )}

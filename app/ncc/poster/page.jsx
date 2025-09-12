@@ -304,11 +304,11 @@ const PosterCompetitionPage = () => {
                   date: "30 Agustus - 10 September 2025",
                   delay: 200,
                   highlight: false,
-                  strikethrough: false,
+                  strikethrough: true,
                 },
                 {
                   event: "Pengumpulan Karya",
-                  date: "TBA",
+                  date: "12 - 13 September 2025",
                   delay: 300,
                 },
                 {
