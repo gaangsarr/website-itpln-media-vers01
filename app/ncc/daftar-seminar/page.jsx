@@ -164,7 +164,8 @@ const SuccessModal = ({ isVisible, onClose, registrationData }) => {
               <div className="flex items-center gap-2">
                 <Building className="w-4 h-4 text-gray-600" />
                 <span className="text-sm">
-                  <strong>Instansi:</strong> {registrationData?.instansi}
+                  <strong>Instansi/Jurusan:</strong>{" "}
+                  {registrationData?.instansi}
                 </span>
               </div>
               <div className="flex items-center gap-2">
@@ -298,7 +299,7 @@ const SeminarRegistrationForm = () => {
 
   // URL Google Apps Script (ganti dengan URL script Anda)
   const SCRIPT_URL =
-    "https://script.google.com/macros/s/AKfycbz68W8eNpdinNzO1SBUFWrzN7zaNudKaaz2qYHtOcN3yEKP3FYMTmIrkYp1GKDaCr7-Yw/exec";
+    "https://script.google.com/macros/s/AKfycby_gQ27aTY_TIPZLtkgiQSqn-iW1F-lSrHprr95xAwlvseop6A-QGHMgDPGp-p1yGljlw/exec";
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -549,7 +550,7 @@ const SeminarRegistrationForm = () => {
                 <div>
                   <label className="block text-sm font-bold text-gray-700 mb-2">
                     <Building className="w-4 h-4 inline mr-2" />
-                    Instansi *
+                    Instansi/Jurusan *
                   </label>
                   <input
                     type="text"
@@ -557,7 +558,7 @@ const SeminarRegistrationForm = () => {
                     value={formData.instansi}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
-                    placeholder="Universitas/Sekolah/Perusahaan"
+                    placeholder="Universitas/Jurusan/Sekolah"
                     required
                   />
                 </div>

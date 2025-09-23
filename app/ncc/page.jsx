@@ -365,16 +365,17 @@ const NCCLandingPage = () => {
                   event: "Pengumpulan Karya",
                   date: "12 - 13 September 2025",
                   delay: 400,
-                  highlight: true,
+                  strikethrough: true,
                 },
                 {
                   event: "Penilaian & Kurasi Karya",
-                  date: "TBA",
+                  date: "15 - 25 September 2025",
                   delay: 500,
+                  highlight: true,
                 },
                 {
                   event: "Awarding & Seminar Nasional NCC 2025",
-                  date: "TBA",
+                  date: "29 September 2025",
                   delay: 600,
                 },
               ].map((item, index) => (
@@ -384,74 +385,68 @@ const NCCLandingPage = () => {
                   delay={item.delay}
                 >
                   {item.highlight ? (
-                    <Link
-                      href="https://forms.gle/tr1USZa8VEvw5apM9"
-                      target="blank"
-                      className="block"
+                    <div
+                      className={`flex items-start space-x-4 p-4 rounded-lg transition-all duration-300 cursor-pointer hover:scale-105 ${
+                        item.highlight
+                          ? "bg-gradient-to-r from-purple-100 to-pink-100 border-2 border-purple-300 shadow-lg transform scale-105"
+                          : item.strikethrough
+                          ? "bg-gray-50 opacity-60"
+                          : "hover:bg-gray-50"
+                      }`}
                     >
                       <div
-                        className={`flex items-start space-x-4 p-4 rounded-lg transition-all duration-300 cursor-pointer hover:scale-105 ${
+                        className={`flex-shrink-0 w-4 h-4 rounded-full mt-1 ${
                           item.highlight
-                            ? "bg-gradient-to-r from-purple-100 to-pink-100 border-2 border-purple-300 shadow-lg transform scale-105"
+                            ? "bg-gradient-to-r from-purple-500 to-pink-500 shadow-lg"
                             : item.strikethrough
-                            ? "bg-gray-50 opacity-60"
-                            : "hover:bg-gray-50"
+                            ? "bg-gray-400"
+                            : "bg-purple-600"
                         }`}
-                      >
-                        <div
-                          className={`flex-shrink-0 w-4 h-4 rounded-full mt-1 ${
+                      />
+                      <div className="flex-1">
+                        <h3
+                          className={`font-bold transition-all duration-300 ${
                             item.highlight
-                              ? "bg-gradient-to-r from-purple-500 to-pink-500 shadow-lg"
+                              ? "text-xl text-purple-800 font-extrabold"
                               : item.strikethrough
-                              ? "bg-gray-400"
-                              : "bg-purple-600"
+                              ? "text-lg text-gray-500 line-through"
+                              : "text-lg text-gray-800"
                           }`}
-                        />
-                        <div className="flex-1">
-                          <h3
-                            className={`font-bold transition-all duration-300 ${
-                              item.highlight
-                                ? "text-xl text-purple-800 font-extrabold"
-                                : item.strikethrough
-                                ? "text-lg text-gray-500 line-through"
-                                : "text-lg text-gray-800"
-                            }`}
-                          >
-                            {item.event}
-                            {item.highlight && (
-                              <span className="ml-3 inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-purple-500 to-pink-500 text-white animate-pulse">
-                                NOW!
-                              </span>
-                            )}
-                          </h3>
-                          <p
-                            className={`mt-1 ${
-                              item.highlight
-                                ? "text-purple-600 font-semibold"
-                                : item.strikethrough
-                                ? "text-gray-400 line-through"
-                                : "text-gray-600"
-                            }`}
-                          >
-                            {item.date}
-                          </p>
+                        >
+                          {item.event}
                           {item.highlight && (
-                            <div className="mt-2 flex items-center space-x-2">
-                              <span className="text-sm text-purple-700 font-medium">
-                                KUMPULKAN KARYA TERBAIKMU!!
-                              </span>
-                            </div>
+                            <span className="ml-3 inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-purple-500 to-pink-500 text-white animate-pulse">
+                              NOW!
+                            </span>
                           )}
-                        </div>
+                        </h3>
+                        <p
+                          className={`mt-1 ${
+                            item.highlight
+                              ? "text-purple-600 font-semibold"
+                              : item.strikethrough
+                              ? "text-gray-400 line-through"
+                              : "text-gray-600"
+                          }`}
+                        >
+                          {item.date}
+                        </p>
                         {item.highlight && (
-                          <div className="flex-shrink-0">
-                            <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center animate-bounce shadow-lg">
-                              <span className="text-white text-xl">🎯</span>
-                            </div>
+                          <div className="mt-2 flex items-center space-x-2">
+                            <span className="text-sm text-purple-700 font-medium">
+                              SAMPAI BERTEMU DI ACARA PUNCAK NCC 2025
+                            </span>
                           </div>
                         )}
                       </div>
-                    </Link>
+                      {item.highlight && (
+                        <div className="flex-shrink-0">
+                          <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center animate-bounce shadow-lg">
+                            <span className="text-white text-xl">🎯</span>
+                          </div>
+                        </div>
+                      )}
+                    </div>
                   ) : (
                     <div
                       className={`flex items-start space-x-4 p-4 rounded-lg transition-all duration-300 ${
@@ -519,6 +514,75 @@ const NCCLandingPage = () => {
                 </ScrollAnimationWrapper>
               ))}
             </div>
+          </div>
+        </ScrollAnimationWrapper>
+      </div>
+
+      {/* Seminar & Awarding NCC 2025 */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <ScrollAnimationWrapper animation="fadeInUp">
+          <h2 className="text-3xl font-bold text-center mb-8">
+            Seminar & Awarding NCC 2025
+          </h2>
+        </ScrollAnimationWrapper>
+
+        <ScrollAnimationWrapper animation="fadeInUp" delay={200}>
+          <div className="text-center mb-8">
+            <p className="text-gray-700 text-lg max-w-2xl mx-auto">
+              Join us for an inspiring seminar featuring industry experts and
+              witness the prestigious NCC 2025 Awards Ceremony. One registration
+              for both amazing experiences - educational insights and
+              celebration of excellence!
+            </p>
+          </div>
+        </ScrollAnimationWrapper>
+
+        {/* Highlights Grid */}
+        <ScrollAnimationWrapper animation="fadeInUp" delay={300}>
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            <div className="bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl p-6 text-center">
+              <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white font-bold text-xl">🎓</span>
+              </div>
+              <h4 className="font-bold text-blue-700 mb-2">Expert Speakers</h4>
+              <p className="text-sm text-gray-600">
+                Learn from industry leaders and tech innovators
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-purple-100 to-purple-50 rounded-xl p-6 text-center">
+              <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white font-bold text-xl">🤝</span>
+              </div>
+              <h4 className="font-bold text-purple-700 mb-2">Networking</h4>
+              <p className="text-sm text-gray-600">
+                Connect with creators, winners, and professionals
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-yellow-100 to-yellow-50 rounded-xl p-6 text-center">
+              <div className="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white font-bold text-xl">🏆</span>
+              </div>
+              <h4 className="font-bold text-yellow-700 mb-2">Awards Show</h4>
+              <p className="text-sm text-gray-600">
+                Celebrate creative excellence and innovation
+              </p>
+            </div>
+          </div>
+        </ScrollAnimationWrapper>
+
+        <ScrollAnimationWrapper animation="scaleIn" delay={400}>
+          <div className="text-center">
+            <a
+              href="/ncc/daftar-seminar"
+              rel="noopener noreferrer"
+              className="inline-block"
+            >
+              <button className="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-blue-700 hover:via-purple-700 hover:to-yellow-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                Join the Event
+              </button>
+            </a>
           </div>
         </ScrollAnimationWrapper>
       </div>
