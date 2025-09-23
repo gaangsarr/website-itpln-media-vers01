@@ -114,8 +114,8 @@ const HeroSection = () => {
         <ScrollAnimationWrapper animation="fadeInUp" delay={400}>
           <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
             Bergabunglah dengan organisasi mahasiswa terdepan di bidang media
-            kreatif dan teknologi. Kembangkan potensimu bersama tim yang
-            passionate dan inovatif.
+            kreatif. Kembangkan potensimu bersama tim yang passionate dan
+            inovatif.
           </p>
         </ScrollAnimationWrapper>
 
