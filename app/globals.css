@@ -119,3 +119,20 @@ body {
 .prose strong {
   @apply font-bold;
 }
+
+/* Fix untuk modal backdrop */
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* Prevent scroll when modal is open */
+.modal-open {
+  overflow: hidden !important;
+}
+
+/* Ensure modals are above everything */
+.modal-container {
+  z-index: 9999 !important;
+}

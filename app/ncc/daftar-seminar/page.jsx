@@ -82,8 +82,22 @@ const Toast = ({ message, type, isVisible, onClose }) => {
   );
 };
 
-// Success Modal Component
+// Success Modal Component - FIXED VERSION
 const SuccessModal = ({ isVisible, onClose, registrationData }) => {
+  // Prevent body scroll when modal is open
+  useEffect(() => {
+    if (isVisible) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isVisible]);
+
   if (!isVisible) return null;
 
   const downloadQRCode = () => {
@@ -96,18 +110,26 @@ const SuccessModal = ({ isVisible, onClose, registrationData }) => {
   };
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-50 p-4 bg-black bg-opacity-50">
-      <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto">
+    // 🔧 FIX: Higher z-index + better backdrop
+    <div className="fixed inset-0 flex items-center justify-center z-[9999] p-4">
+      {/* Backdrop dengan opacity yang benar */}
+      <div
+        className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+        onClick={onClose}
+      ></div>
+
+      {/* Modal Content */}
+      <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto relative z-10 transform transition-all duration-300 scale-100">
         {/* Header */}
         <div className="bg-gradient-to-r from-purple-500 to-blue-500 text-white p-6 rounded-t-2xl text-center">
           <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
             <CheckCircle className="w-10 h-10 text-green-500" />
           </div>
           <h2 className="text-2xl font-bold mb-2">Pendaftaran Berhasil! 🎉</h2>
-          <p className="text-purple-100">Selamat bergabung di NCC 2025</p>
+          <p className="text-purple-100">Sampai bertemu di Seminar NCC 2025</p>
         </div>
 
-        {/* Content */}
+        {/* Content - sama seperti sebelumnya */}
         <div className="p-6 space-y-6">
           {/* Registration Info */}
           <div className="text-center">
@@ -202,11 +224,13 @@ const SuccessModal = ({ isVisible, onClose, registrationData }) => {
             <div className="grid grid-cols-1 gap-2 text-sm">
               <div>
                 <span className="font-medium text-gray-700">Email:</span>
-                <span className="text-blue-600 ml-2">ncc2025@itpln.ac.id</span>
+                <span className="text-blue-600 ml-2">
+                  itplnmediacorp@gmail.com
+                </span>
               </div>
               <div>
                 <span className="font-medium text-gray-700">WhatsApp:</span>
-                <span className="text-green-600 ml-2">+62 812-3456-7890</span>
+                <span className="text-green-600 ml-2">+62 895-1305-0951</span>
               </div>
             </div>
           </div>
@@ -434,7 +458,7 @@ const SeminarRegistrationForm = () => {
               </p>
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                 <p className="text-sm text-blue-800">
-                  📢 Pantai Instagram{" "}
+                  📢 Pantau Instagram{" "}
                   <a
                     href="https://instagram.com/itplnmedia"
                     target="_blank"
@@ -457,12 +481,12 @@ const SeminarRegistrationForm = () => {
                 Pendaftaran Seminar NCC 2025
               </h1>
               <p className="text-gray-600 text-lg">
-                National Computer Contest 2025
+                National Creative Competition 2025
               </p>
               <div className="mt-4 bg-gradient-to-r from-purple-100 to-blue-100 border border-purple-200 rounded-xl p-4">
                 <p className="text-purple-800 font-semibold">
-                  📅 25 Oktober 2025 | 🕒 09.00 - 16.00 WIB | 📍 Auditorium
-                  ITPLN
+                  📅 29 September 2025 | 🕒 08.00 - 12.00 WIB | 📍 Auditorium
+                  ITPLN Lt. 12
                 </p>
               </div>
             </div>
@@ -550,7 +574,7 @@ const SeminarRegistrationForm = () => {
                     value={formData.nimNpm}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
-                    placeholder="NIM atau NPM Anda"
+                    placeholder="Apabila tidak ada isi (-)"
                     required
                   />
                 </div>
@@ -593,7 +617,7 @@ const SeminarRegistrationForm = () => {
             <div className="mt-8 text-center">
               <p className="text-gray-500 text-sm">
                 Dengan mendaftar, Anda menyetujui untuk menerima informasi
-                terkait acara via email dan WhatsApp
+                terkait acara via email
               </p>
             </div>
           </div>
