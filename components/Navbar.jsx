@@ -17,7 +17,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar bg-gradient-to-r from-[#B13BFF] via-[#4A1789] to-[#090040] p-3 relative shadow-2xl">
+    <div className="navbar bg-gradient-to-r from-[#B13BFF] via-[#4A1789] to-[#090040] p-2 relative shadow-2xl">
       <div className="container mx-auto">
         <div className="navbar-box flex items-center justify-between">
           <div className="logo">
@@ -102,7 +102,7 @@ const Navbar = () => {
                       </div>
                     </Link>
                     <Link
-                      href="/oprec"
+                      href="/oprec-19"
                       className="group flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-[#4A1789] hover:bg-gradient-to-r hover:from-[#4A1789]/10 hover:to-[#B13BFF]/10 rounded-xl transition-all duration-200 font-medium"
                       onClick={() => setDropdownOpen(false)}
                     >
@@ -245,7 +245,7 @@ const Navbar = () => {
                         </span>
                       </Link>
                       <Link
-                        href="/oprec"
+                        href="/oprec-19"
                         onClick={() => {
                           setActive(false);
                           setDropdownOpen(false);

@@ -30,12 +30,15 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${fontPoppins.className} antialiased`}>
         {/* Fixed Navbar */}
-        <div className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm -translate-y-0.5">
+        <div className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
           <Navbar />
         </div>
 
-        {/* Main Content dengan padding top untuk navbar */}
-        <div>{children}</div>
+        {/* ⚠️ WRAPPER DENGAN OVERFLOW HIDDEN */}
+        <div className="w-screen overflow-x-hidden relative">
+          <div className="pt-12 sm:pt-20">{children}</div>
+        </div>
+
         <SpeedInsights />
         <Analytics />
       </body>
