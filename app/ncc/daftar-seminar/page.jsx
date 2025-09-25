@@ -17,7 +17,6 @@ import {
   Download,
 } from "lucide-react";
 
-// Toast Notification Component
 const Toast = ({ message, type, isVisible, onClose }) => {
   useEffect(() => {
     if (isVisible) {
@@ -280,7 +279,7 @@ const useToast = () => {
 
 const SeminarRegistrationForm = () => {
   // Status pendaftaran - ubah ke true untuk membuka pendaftaran
-  const PENDAFTARAN_DIBUKA = true;
+  const PENDAFTARAN_DIBUKA = false;
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccessModal, setShowSuccessModal] = useState(false);
@@ -297,7 +296,7 @@ const SeminarRegistrationForm = () => {
   // Gunakan hook toast
   const { toast, showToast, hideToast } = useToast();
 
-  // URL Google Apps Script (ganti dengan URL script Anda)
+  // URL Google Apps Script
   const SCRIPT_URL =
     "https://script.google.com/macros/s/AKfycby_gQ27aTY_TIPZLtkgiQSqn-iW1F-lSrHprr95xAwlvseop6A-QGHMgDPGp-p1yGljlw/exec";
 
